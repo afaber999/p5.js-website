@@ -11,7 +11,7 @@ Contribute: "Bijdragen"
 Forum: "Forum"
 
 footer1: "p5.js is gemaakt door "
-footer2: " en is ontwikkeld door vele vrijwillers, met de ondersteuning van de "
+footer2: " en is ontwikkeld door grote groep enthousiastelingen, met de ondersteuning van de "
 footer3: " en de "
 footer4: "Ontwerp en grafische vormgeving door "
 
@@ -275,14 +275,14 @@ learn:
 test-tutorial:
 
 libraries:
-  Libraries: "Libraries"
-  p5.dom: "p5.dom lets you interact with HTML5 objects beyond the canvas, including video, audio, webcam, input, and text."
-  p5.sound: "p5.sound extends p5 with Web Audio functionality including audio input, playback, analysis and synthesis."
-  p5.accessibility: "p5.accessibility makes the p5 canvas more accessible to people who are blind and visually impaired."
-  Contributed: "Contributed"
-  p5.serial1: "p5.serial enables serial communication between devices that support serial (RS-232) and p5 sketches running in the browser. Created by "
-  p5.serial2: ", with contributions from "
-  p5.serial3: " and "
+  Libraries: "Bibliotheken"
+  p5.dom: "Met p5.dom kun je HTML5-objecten integreren in je schets (buiten het canvas), inclusief video, audio, webcam, invoer en tekst."
+  p5.sound: "p5.sound breidt p5 ogeving uit met Web Audio-functionaliteit, inclusief audio-invoer, weergave, analyse en synthese van geluid."
+  p5.accessibility: "p5.accessibility maakt het p5 canvas toegankelijker voor blinden en slechtzienden."
+  Contributed: "Bonus bibliotheken"
+  p5.serial1: "p5.serial maakt seriële communicatie mogelijk tussen apparaten die seriële (RS-232) en p5-schetsen ondersteunen die in de browser worden uitgevoerd. Gemaakt door "
+  p5.serial2: ", met bijdragen van Jen Kagan "
+  p5.serial3: " en "
   p5.collide2D: "p5.collide2D provides tools for calculating collision detection for 2D geometry with p5.js. Created by "
   rita.js: "RiTa.js provides a set of natural language processing objects for generative literature. Created by "
   p5.geolocation: "p5.geolocation provides techniques for acquiring, watching, calculating, and geofencing user locations for p5.js. Created by "
