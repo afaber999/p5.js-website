@@ -99,7 +99,7 @@ function buildFolder(lang, inputRoot, outputRoot, folder) {
     inputFiles.forEach(function(file) {
       var fileName = path.joinSafe(folderPath, file);
       var data = fs.readFileSync(fileName, 'utf8');
-      var name = findName(data);
+      var name = findName(data).trim();
 
       if (lang === 'en') {
         var isMobile = folderName.indexOf('Mobile') >= 0;
