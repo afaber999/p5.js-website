@@ -1,18 +1,18 @@
 /*
- * @name Interactivity 1
+ * @name Interactief 1
  * @frame 720,425
- * @description The circle changes color when you click on it.
- * <p><em><span class="small"> To run this example locally, you will need the
- * <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>.
+ * @description Als je op de cirkel klikt verandert de kleur.
+ * <p><em><span class="small"> Als je dit voorbeeld lokaal wilt runnen, heb je de 
+ * <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom bibliotheek ook nodig</a>.
  * </em></p>
  */
 
-// for red, green, and blue color values
+// voor rood, groen, en blauwe kleurwaarden
 var r, g, b;
 
 function setup() {
   createCanvas(720, 400);
-  // Pick colors randomly
+  // Selecteer een willekeurige kleuren
   r = random(255);
   g = random(255);
   b = random(255);
@@ -20,19 +20,19 @@ function setup() {
 
 function draw() {
   background(127);
-  // Draw a circle
+  // Teken een cirkel
   strokeWeight(2);
   stroke(r, g, b);
   fill(r, g, b, 127);
   ellipse(360, 200, 200, 200);
 }
 
-// When the user clicks the mouse
+// Als de gebruiken op canvas klikt
 function mousePressed() {
-  // Check if mouse is inside the circle
+  // Controleer of de klik binnen de cirkel heeft plaatsgevonden
   var d = dist(mouseX, mouseY, 360, 200);
   if (d < 100) {
-    // Pick new random color values
+    // Selecteer opnieuw een willekeurige kleur
     r = random(255);
     g = random(255);
     b = random(255);

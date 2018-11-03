@@ -1,24 +1,24 @@
 /*
- * @name Simple Shapes
- * @description This examples includes a circle, square, triangle, and a flower.
+ * @name Eenvoudige (2D) vormen
+ * @description Dit voorbeeld bevat een eenvoudig 2D vormen zoals: circel, rechthoek, driehoek en een bloem.
  */
 function setup() {
-  // Create the canvas
+  // Creer het canvas
   createCanvas(720, 400);
   background(200);
 
-  // Set colors
+  // Stel de kleuren in
   fill(204, 101, 192, 127);
   stroke(127, 63, 120);
 
-  // A rectangle
+  // Maak een rechthoek
   rect(40, 120, 120, 40);
-  // An ellipse
+  // Een circel
   ellipse(240, 240, 80, 80);
-  // A triangle
+  // Een driehoek
   triangle(300, 100, 320, 100, 310, 80);
 
-  // A design for a simple flower
+  // Maake een simpele bloem vorm
   translate(580, 200);
   noStroke();
   for (var i = 0; i < 10; i ++) {
