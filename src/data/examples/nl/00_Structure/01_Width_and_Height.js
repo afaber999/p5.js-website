@@ -1,8 +1,9 @@
 /*
- * @name Width and Height
- * @description The 'width' and 'height' variables contain the 
- * width and height of the display window as defined in the createCanvas() 
- * function.
+ * @name Width en Height variabelen
+ * @description The 'width' and 'height' variabelen bevatten de
+ * waarde van de breedte (width) en de hoogte (height) van het 
+ * canvas, zoals deze gespecifieerd zijn bij het aanmaken van het
+ * canvas mbv de createCanvas()functie.
  */
 function setup() {
   createCanvas(720, 400);

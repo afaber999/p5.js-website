@@ -151,16 +151,17 @@
       "returns": "De verzadegings waarde van het parameter object"
 	 },
     "background": {
-      "description": "La función background() define el color usado como fondo del lienzo p5.js. El fondo por defecto es gris claro. Esta función es típicamente usada dentro de draw() para despejar o borrar la ventana mostrada al inicio de cada cuadro, pero puede ser usada dentro de setup() para definir el fondo en el primer cuadro de la animación o si el fondo solo necesita ser definido una vez.",
-      "params": ["Color: cualquier valor creado con la función color()",
-               "Nummer: opacidad del fondo relativo al rango de color actual (por defecto es 0-100)",
-               "colorstring: string de color, formatos posibles: enteros rgb() o rgba(), porcentajes rgb() o rgba(), hex 3 dígitos, hex 6 dígitos",
-               "Nummer: especifica un valor entre blanco y negro",
-               "Nummer: valor de rojo o hue (dependiendo del modo de color actual)",
-               "Nummer: valor de verde o saturación (dependiendo del modo de color actual)",
-               "Nummer: valor de azul o brillo (dependiendo del modo de color actual)",
-               "p5.Image: imagen creada con loadImage() o createImage(), para ser definida como fondo (debe ser del mismo tamaño que la ventana del bosquejo)"],
-      "returns": "the p5 object"
+      "description": "De functie background () stelt de kleur in die wordt gebruikt voor de achtergrond van het canvas p5.js. De standaardachtergrond is lichtgrijs. Deze functie wordt meestal gebruikt binnen Draw () om het displayvenster aan het begin van elk frame te wissen, maar het kan binnen setup () worden gebruikt om de achtergrond in het eerste frame van de animatie in te stellen of als de achtergrond slechts eenmaal hoeft te worden ingesteld.<br><br>De kleur wordt gespecificeerd in termen van de RGB-, HSB- of HSL-kleur, afhankelijk van de huidige colorMode. (De standaardkleurenruimte is RGB, met elke waarde in het bereik van 0 tot 255). Het alfanummer heeft ook een bereik van 0 tot 255.<br><br>Als een enkel tekenreeksargument wordt opgegeven, worden RGB-, RGBA- en Hex CSS-kleurstrings en alle genoemde kleurensets ondersteund. In dit geval wordt een alpha-getalwaarde als tweede argument niet ondersteund; het RGBA-formulier moet worden gebruikt.<br><br>Een p5.Color-object kan ook worden gebruikt om de achtergrondkleur in te stellen.<br><br>Een p5.Image kan ook worden gebruikt om een achtergrondafbeelding in te stellen.",
+      "params": ["p5.Color: kleur van de background (object kan gecreëerd worden door de functie color())",
+               "String: String welke een kleur bescrijft, mogelijke formaten omvatten: integer rg () of rgba(), percentage rgb() of rgba(), 3-cijferige hex, 6-cijferige hex",
+               "Nummer: opaciteit (dekking) van de achtergrond ten opzichte van het huidige kleurbereik (standaard is 0-255)",
+               "Nummer: specificeert een waarde tussen wit en zwart",
+               "Nummer: roodwaarde of tintwaarde (afhankelijk van de huidige kleurmodus)",
+               "Nummer: groene of verzadigingswaarde (afhankelijk van de huidige kleurmodus)",
+               "Nummer: blauwe of helderheidswaarde (afhankelijk van de huidige kleurmodus)",
+               "Nummer[]: een array met de rode, groene, blauwe en alpha-componenten van de kleur",
+               "p5.Image: afbeelding aangemaakt mbv loadImage() of createImage(), in te stellen als achtergrond (moet dezelfde grootte hebben als het schetsvenster)"],
+      "returns": ""
     },
     "clear": {
       "description": "Borra los pixeles del buffer. Esta función solo funciona en objetos p5.Canvas creados con la función createCanvas(); no funcionará con la ventana principal. A diferencia del contexto principal de gráficas, los pixeles en las áreas gráficas adicionales creadas con createGraphics() pueden ser entera o parcialmente transparentes. Esta función borra todo para hacer los pixeles 100% transparentes.",
@@ -1431,7 +1432,7 @@
     "textWidth": {
       "description": "Berekent de lengte (aantal karakters) van een string.",
       "params": ["String: invoer string"],
-      "returns": "Nummer: Aantal karakters"
+      "returns": "Nummer: Aantal characters"
     },
     "text": {
       "description": "Dibuja texto en la pantalla. Muestra la información especificada en el primer parámetro en la pantalla, en la posición especificada por los parámetros adicionales. Una fuente por defecto será usada a menos que una fuente sea definida por la función textFont() y un tamaño por defecto será usado a menos que se use la función textSize(). Cambia el color del texto con la función fill(). Cambia la apariencia del texto con las funciones stroke() y strokeWeight(). El texto se muestra en relación a la función textAlign(), que da la opción de dibujar a la izuiqerda, derecha y centro de las coordenadas. Los parámetros x2 e y2 definen un área rectangular donde mostrar el texto y solo puede ser usado por los datos tipo String. Cuando estos parámetros son especificados, son interpretados según la configuración de rectMode(). El texto que no cabe completamente dentro del rectángulo especificado no será dibujado en pantalla.",

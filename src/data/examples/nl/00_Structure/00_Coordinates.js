@@ -1,39 +1,43 @@
 /*
  * @name Coordinates
- * @description All shapes drawn to the screen have a position that is 
- * specified as a coordinate. All coordinates are measured as the distance from
- * the origin in units of pixels. The origin [0, 0] is the coordinate in the
- * upper left of the window and the coordinate in the lower right is [width-1, 
- * height-1].
+ * @description Alle vormen die op het scherm worden getekend, hebben een 
+ * positie die wordt beschreven als een coördinaat. Alle coördinaten worden 
+ * gemeten ten opzichte oorsprong, de eenheid is een pixel. De oorsprong 
+ * [0, 0] is de coördinaat in de linkerbovenhoek van het venster en de 
+ * c in de rechterbenedenhoek is [breedte-1, hoogte-1].
  */
 function setup() {
-  // Sets the screen to be 720 pixels wide and 400 pixels high
+  // Zet het de grootte van het canvas naar 
+  // een breedte 720 pixels en een hoogte van 400 pixels
   createCanvas(720, 400);
 }
 
 function draw() {
-  // Set the background to black and turn off the fill color
+  // Zet de achtergrondkleur naar zwart en zet de vulkleur uit
   background(0);
   noFill();
 
-  // The two parameters of the point() method each specify 
+  // De twee parameters van een punt (point()) specificeren de  
   // coordinates.
-  // The first parameter is the x-coordinate and the second is the Y 
+  // The eerste parameter is het x-coördinate en het tweede 
+  // parameter het y-coördinate.
   stroke(255);
   point(width * 0.5, height * 0.5);
   point(width * 0.5, height * 0.25); 
 
-  // Coordinates are used for drawing all shapes, not just points.
-  // Parameters for different functions are used for different 
-  // purposes. For example, the first two parameters to line()  
-  // specify the coordinates of the first endpoint and the second  
-  // two parameters specify the second endpoint
+  // Coördinaten worden gebruikt bij het tekenen van alle vormen,
+  // niet alleen van punten. Parameters voor verschillende vormen
+  // hebben voor iedere vorm een andere betekenis. Bijvoorbeeld, 
+  // de 1e/2e parameters van een lijn ( line() ) specificeren
+  // het coördinaat van het eerste eindpunt en de 3e/4e parameters  
+  // specificeren het coördinaten van het tweede eindpunt.
   stroke(0, 153, 255);
   line(0, height*0.33, width, height*0.33);
 
-  // By default, the first two parameters to rect() are the 
-  // coordinates of the upper-left corner and the second pair
-  // is the width and height
+  // Standaard beschrijven de eerste twee parameters van de rechthoek 
+  // functie ( rect() ) het coördinaat van de linkerbovenhoek, terwijl
+  // de 3e parameter de breedte van de rechtoek beschrijft en de 4e
+  // parameter de hoogte van de rechthoek beshrijft
   stroke(255, 153, 0);
   rect(width*0.25, height*0.1, width * 0.5, height * 0.8);
 }
