@@ -15,7 +15,7 @@
   "reference-menu-books": "Boeken",
   "reference-menu-community": "Gemeenschap",
   "reference-menu-forum": "Forum",
-  "reference-description1": "Kunt u niet vinden waarnaar u op zoek bent? Misschien staat het in de ",
+  "reference-description1": "v2 Kunt u niet vinden waarnaar u op zoek bent? Misschien staat het in de ",
   "reference-description2": "of",
   "reference-description3": "U kunt hier een offline versie van de referentie ",
   "reference-description4": "downloaden",
@@ -129,20 +129,20 @@
       "returns": "De kleurtint van het parameter object"
      },
     "lerpColor": {
-      "description": "Mezcla dos colores para encontrar un tercer color según la combinación de ambos. El parámetro amt es la cantidad a interpolar entre los dos valores, donde 0.0 es igual al primer color, 0.1 es muy cercano al primer color, 0.5 está a medio camino entre ambos, etc. Un valor menor que 0 será tratado como 0. Del mismo modo, valores sobre 1 serán tratados como 1. Esto es distinto al comportamiento de lerp(), pero necesario porque de otra manera los Nummers fuera de rango producirían colores no esperados y extraños. La manera en que los colores son interpolados depende del modo de color actual.",
-      "params": ["Arreglo/Nummer: interpola desde este color",
-      "Arreglo/Nummer: interpola hacia este color",
-      "Nummer: Nummer entre 0 y 1"],
-      "returns": "Arreglo/Nummer: color interpolado"
+      "description": "Creërt een nieuwe kleur door het mengen van twee kleuren. De parameter amt bepaalt de mengverhouding (ïnterpolatie) tussen de twee kleurwaarden, waarbij 0.0 gelijk is aan de eerste kleur, 0.1 is zeer dicht bij de eerste kleur, 0.5 ligt halverwege tussen, enz. Een hoeveelheid onder 0 wordt behandeld als 0. Evenzo bedragen hierboven 1 wordt afgetopt op 1. Dit is anders dan het gedrag van lerp (), maar noodzakelijk omdat anders nummers buiten het bereik vreemde en onverwachte kleuren produceren.<br><br>De manier waarop kleuren worden geïnterpoleerd, is afhankelijk van de huidige kleurmodus.",
+      "params": ["Nummer: eerste kleur",
+      "Nummer: tweede kleur",
+      "Nummer: Mengverhouding tussen (waarde tussen 0.0 en 1.0"],
+      "returns": "p5.Color: het geinterpoleerde kleur object"
     },
     "lightness": {
       "description": "Extrae el valor de luminosidad HSL de un color o de un arreglo de pixeles.",
-      "params": ["Objeto: objeto p5.Color o arreglo de pixeles"],
+      "params": ["p5.Color | Number[] | String: CSS Color "],
       "returns": "De licht waarde van het parameter object"
 	},
     "red": {
       "description": "Methode om de rode waarde uit een kleur of pixelarray te halen.",
-      "params": ["Objeto: objeto p5.Color o arreglo de pixeles"],
+      "params": ["p5.Color | Number[] | String: CSS Color "],
       "returns": "De rode waarde van het parameter object"
     },
     "saturation": {
@@ -164,8 +164,8 @@
       "returns": ""
     },
     "clear": {
-      "description": "Borra los pixeles del buffer. Esta función solo funciona en objetos p5.Canvas creados con la función createCanvas(); no funcionará con la ventana principal. A diferencia del contexto principal de gráficas, los pixeles en las áreas gráficas adicionales creadas con createGraphics() pueden ser entera o parcialmente transparentes. Esta función borra todo para hacer los pixeles 100% transparentes.",
-      "returns": "the p5 object"
+      "description": "Wist de pixels buffer. Deze functie werkt alleen op p5.Canvas-objecten gemaakt met de functie createCanvas(); het zal niet werken met het browservenster. In tegenstelling tot de grafische hoofdcontext kunnen pixels in extra grafische gebieden die met createGraphics() zijn gemaakt, geheel of gedeeltelijk transparant zijn. Met deze functie wordt alles gewist om alle pixels 100% transparant te maken.",
+      "returns": ""
     },
     "colorMode": {
       "description": "colorMode() cambia la manera en que p5.js interpreta los datos de color. Por defecto, los parámetros de fill(), stroke(), background() y color() son definidos por valores entre 0 y 255 en modo RGB. Esto es equivalente a definir el modo de color según colorMode(RGB, 255). Definir el modo de color en colorMode(HSB) permite usar el sistema HSB. Por defecto, este modo de color es colorMode(HSB, 360, 100, 100, 1). También se puede usar HSL. Nota: los objetos de color existentes recuerdan el modo en que fueron creados, por lo que puedes cambiar el modo como quieras, sin afectar su apariencia.",
@@ -174,7 +174,7 @@
       "Nummer: rango de verde o saturación, dependiendo del modo de color actual.",
       "Nummer: rango de azul o brillo/luminosidad, dependiendo del modo de color actual.",
       "Nummer: rango de transparencia alpha"],
-      "returns": "the p5 object"
+      "returns": ""
     },
     "fill": {
       "description": "Define el color usado para el relleno de figuras geométricas. Por ejemplo, si ejecutas fill(204, 102, 0), todas las figuras a continuación tendrán relleno naranja. Este color es especificado en términos de color RGB o HSB, dependiendo del modo de color según colorMode() (el dominio de color por defecto es RGB, con cada valor en el rango entre 0 y 255). Si se provee un argumento tipo string, los tipos RGB, RGBA y CSS hexadecimal están soportados. Un objeto Color p5 puede ser provisto para definir el color del relleno.",
@@ -182,7 +182,7 @@
       "Nummer: valor de verde o saturación (dependiendo del modo de color actual)",
       "Nummer: valor de azul o brillo (dependiendo del modo de color actual)",
       "Nummer: opacidad del fondo"],
-      "returns": "the p5 object"
+      "returns": ""
     },
     "noFill": {
       "description": "Deshabilita el relleno de figuras geométricas. Si tanto noStroke() como noFill() son ejecutados, nada será dibujado en pantalla.",
