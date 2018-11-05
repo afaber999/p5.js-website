@@ -15,7 +15,7 @@
   "reference-menu-books": "Boeken",
   "reference-menu-community": "Gemeenschap",
   "reference-menu-forum": "Forum",
-  "reference-description1": "v2 Kunt u niet vinden waarnaar u op zoek bent? Misschien staat het in de ",
+  "reference-description1": "v4 Kunt u niet vinden waarnaar u op zoek bent? Misschien staat het in de ",
   "reference-description2": "of",
   "reference-description3": "U kunt hier een offline versie van de referentie ",
   "reference-description4": "downloaden",
@@ -32,16 +32,12 @@
   "reference-parameters": "Parameters",
   "reference-syntax": "Syntax",
   "reference-returns": "Resultaat",
-  "footer1": "p5.js is gemaakt dooor ",
-  "footer2": " en is ontwikkeld door meerdere vrijwilligers met ondersteuning van de ",
-  "footer3": " en ",
-  "footer4": "Opmaak en grafisch ontwerp is gemaakt door ",
   "Libraries": "Bibliotheken",
   "Learn": "Leren",
   "Examples": "Voorbeelden",
   "Books": "Boeken",
   "Community": "Gemeenschap",
-  "Contribute": "Contributie",
+  "Contribute": "Bijdragen",
   "Forum": "Forum",
   "h1": "Referentie",
   "Color": "Kleur",
@@ -89,10 +85,11 @@
   "Camera": "Camera",
   "Lights": "Licht",
   "Material": "Materiaal",
-  "footer1": "p5.js fue creado por ",
-  "footer2": " y es desarrollado por una comunidad de colaboradores, con apoyo de ",
-  "footer3": " y ",
-  "footer4": "Identidad y diseño gráfico por ",
+  "footer1": "p5.js is gemaakt door ",
+  "footer2": " en is ontwikkeld door grote groep enthousiastelingen, met de ondersteuning van de ",
+  "footer3": " en de ",
+  "footer4": "Ontwerp en grafische vormgeving door ",
+
   "p5": {
     "alpha": {
       "description": "Alpha methode kan gebruikt worden om de alpha waard (omgekeerde transparantie) uit een kleur of pixelarray te halen.",
@@ -110,13 +107,16 @@
       "returns": "De helderheids waarde van het parameter object"
     },
     "color": {
-      "description": "Crea colores para ser almacenados en variables del tipo color. Los parámetros son interpretados como valores RGB o HSB, dependiendo del modo actual de color según colorMode)(). El modo por defecto es RGB con valores entre 0 y 255 y, por lo tanto, la función color(255, 204, 0) retorna un color amarillo brillante. Nota que si solo se provee un valor a la función color(), será interpretado como un valor en escala de grises. Añade un segundo valor, y será usado como transparencia alpha. Cuando se especifican tres valores, son interpretados como valores RGB o HSB. Al añadir un cuarto valor se aplica transparencia alpha. Si se provee solo un parámetro de tipo string, será interpretado como un string de color compatible con CSS.Los colores son almacenados como Nummers o arreglos.",
-      "params": ["Nummer|String: Nummer especificando el valor entre blanco y negro.",
-      "Nummer: valor de alpha relativo al rango de color actual (por defecto es 0-100)",
-      "Nummer|String: valor de rojo o tinte relativo al rango de color actual, o un string de color",
-      "Nummer: valor de verde o saturación relativo al rango de color actual",
-      "Nummer: valor de azul o brillo relativo al rango de color actual"],
-      "returns": "Arreglo: color resultante"
+      "description": "Creëert een kleurobject voor het opslaan in variabelen van het kleurdatatype. De parameters worden geïnterpreteerd als RGB- of HSB-waarden, afhankelijk van de huidige colorMode(). De standaardmodus is RGB-waarden van 0 tot 255 en daarom zal de functie aanroep Color(255, 204, 0) een felle gele kleur retourneren. <br><br>Als slechts één waarde aan Color() wordt gegeven, zal deze geïnterpreteerd worden als een grijsschaalwaarde. Voeg een tweede waarde toe en deze wordt gebruikt voor alpha-transparantie. Wanneer drie waarden zijn opgegeven, worden deze geïnterpreteerd als RGB- of HSB-waarden. Het toevoegen van een vierde waarde is van toepassing op alpha-transparantie.<br><br>Als een enkel-reeksargument wordt opgegeven, worden RGB-, RGBA- en Hex CSS-kleurstrings en alle genoemde kleurensets ondersteund. In dit geval wordt een alpha-getalwaarde als tweede argument niet ondersteund; het RGBA format moet worden gebruikt.",     
+      "params": ["Nummer :getal dat de waarde tussen wit en zwart opgeeft.",
+      "Nummer: alpha-waarde ten opzichte van huidig ​​kleurenbereik (standaard is 0-255)",
+      "Nummer: rood of tint waarde ten opzichte van het huidige kleurbereik",
+      "Nummer: groen of verzadigingswaarde ten opzichte van het huidige kleurbereik",
+      "Nummer: Nummer :blauwe of helderheidswaarde ten opzichte van het huidige kleurenbereik",
+      "String :een kleurstring",
+      "Nummer [] :een array met de rode, groene, blauwe en alpha-componenten van de kleur",
+      "p5.Color object"],
+      "returns": "p5.Color object"
     },
     "green": {
       "description": "Methode om de groene waarde uit een kleur of pixelarray te halen.",
@@ -168,12 +168,13 @@
       "returns": ""
     },
     "colorMode": {
-      "description": "colorMode() cambia la manera en que p5.js interpreta los datos de color. Por defecto, los parámetros de fill(), stroke(), background() y color() son definidos por valores entre 0 y 255 en modo RGB. Esto es equivalente a definir el modo de color según colorMode(RGB, 255). Definir el modo de color en colorMode(HSB) permite usar el sistema HSB. Por defecto, este modo de color es colorMode(HSB, 360, 100, 100, 1). También se puede usar HSL. Nota: los objetos de color existentes recuerdan el modo en que fueron creados, por lo que puedes cambiar el modo como quieras, sin afectar su apariencia.",
-      "params": ["Constante: RGB o HSB, correspondiente a Rojo/Verde/Azul o tinte/saturación/brillo (o luminosidad)",
-      "Nummer: rango de rojo o tinte, dependiendo del modo de color actual, o rango para todos los valores",
-      "Nummer: rango de verde o saturación, dependiendo del modo de color actual.",
-      "Nummer: rango de azul o brillo/luminosidad, dependiendo del modo de color actual.",
-      "Nummer: rango de transparencia alpha"],
+      "description": "De colorMode() functie verandert de manier waarop p5.js kleurgegevens interpreteert. Standaard worden de parameters voor fill(), stroke(), background() en color() gedefinieerd door waarden tussen 0 en 255 met behulp van het RGB-kleurmodel. Dit komt overeen met het instellen van colorMode(RGB, 255). Met colorMode(HSB) kunt u in plaats daarvan het HSB-systeem gebruiken. Standaard is dit colorMode (HSB, 360, 100, 100, 1). U kunt ook HSL gebruiken.<br><br>Opmerking: bestaande kleurenobjecten onthouden de modus waarin ze zijn gemaakt, zodat u modi kunt wijzigen zoals u wilt zonder het uiterlijk van bestaande objecten te beïnvloeden.",
+      "params": ["Constante :RGB, HSB of HSL, corresponderend met Rood/Groen/Blauw en Tint/Verzadiging/Helderheid (of Lichtheid)",
+      "Nummer: bereik voor alle waarden.",
+      "Nummer: bereik voor rood of tint, afhankelijk van de huidige kleurmodus.",
+      "Nummer: bereik voor groen of verzadiging, afhankelijk van de huidige kleurmodus.",
+      "Nummer: bereik voor blauw of helderheid / lichtheid, afhankelijk van de huidige kleurmodus.",
+      "Nummer: bereik voor de alpha."],
       "returns": ""
     },
     "fill": {
@@ -186,11 +187,11 @@
     },
     "noFill": {
       "description": "Deshabilita el relleno de figuras geométricas. Si tanto noStroke() como noFill() son ejecutados, nada será dibujado en pantalla.",
-      "returns": "the p5 object"
+      "returns": ""
     },
     "noStroke": {
       "description": "Nadat noStroke() is aangeroepen zal er geen omtrek worden getekend. Als zowel noStroke() en noFill() worden aangeroepen, zal er niets naar het scherm worden getekend.",
-      "returns": "the p5 object"
+      "returns": ""
     },
     "stroke": {
       "description": "Define el color usado para dibujar líneas y bordes de figuras. Este color especificado en términos de color RGB o HSB, dependiendo del modo de color actual según colorMode() (el dominio de color por defecto es RGB, con cada valor en el rango entre 0 y 255). Si se provee un argumento tipo string, los tipos RGB, RGBA y CSS hexadecimal están soportados. Un objeto Color p5 puede ser provisto para definir el color del trazado.",
@@ -198,7 +199,7 @@
       "Nummer: valor de verde o saturación (dependiendo del modo de color actual)",
       "Nummer: valor de azul o brillo (dependiendo del modo de color actual)",
       "Nummer: opacidad del fondo"],
-      "returns": "el objeto p5"
+      "returns": ""
     },
     "arc": {
       "description": "Dibuja un arco en la pantalla. Si se llama con solo a, b, c, d, start y stop, el arco se dibuja como un pastel abierto. Si el modo se provee, el arco será dibujado abierto, o como acorde, o como pastel, según lo especificado. El origen puede ser cambiado con la función ellipseMode(). Nota que si dibujas un círculo completo (ej: 0 a TWO_PI) aparecerá en blanco, porque 0 y TWO_PI son la misma posición en el círculo unitario. La mejor manera de manejar esto es usar la función ellipse() para una elipse cerrada, y la función arc() para generar solo secciones de una elipse.",
@@ -209,29 +210,33 @@
       "Nummer: ángulo inicial del arco de elipse.",
       "Nummer: ángulo final del arco de elipse.",
       "Constante: parámetro opcional para determinar la manera de dibujar el arco."],
-      "returns": "the p5 object"
+      "returns": ""
     },
     "ellipse": {
-      "description": "Dibuja una elipse (óvalo)  en la pantalla. Una elipse con igual ancho y altura es un círculo. Por defecto, los primeros dos parámetros definen la ubicación, y el tercero y cuarto definen el ancho y altura de la figura. Si no especifica una altura, el valor del ancho es usado como ancho y altura. El origen puede ser cambiado con la función ellipseMode().",
-      "params": ["Nummer: coordenada x de la elipse.",
-      "Nummer: coordenada y de la elipse.",
-      "Nummer: ancho de la elipse.",
-      "Nummer: altura de la elipse."],
-      "returns": "the p5 object"
+      "description": "Tekent een ellips (ovaal) naar het scherm. Een ellips met gelijke breedte en hoogte is een cirkel. Standaard bepalen de eerste twee parameters de locatie en bepalen de derde en vierde parameters de breedte en hoogte van de vorm in. Als er geen hoogte is opgegeven, wordt de breedte gebruikt voor zowel de breedte als de hoogte. Als een negatieve hoogte of breedte is opgegeven, wordt de absolute waarde genomen. De oorsprong kan worden gewijzigd met de functie ellipseMode ().",
+      "params": ["Nummer: x-coördinaat van het eerste punt.",
+      "Nummer: x-coördinaat van het eerste punt.",
+      "Nummer: breedte van de ellips.",
+      "Nummer: hoogte van de ellips.",
+      "Integer: aantal radiale sectoren wat wordt gebruikt om de ellips te tekenen (hoger getal = meer detail)."],
+      "returns": ""
     },
     "line": {
-      "description": "Dibuja una línea (un camino directo entre dos puntos) en la pantalla. La versión de line() con cuatro parámetros dibuja la línea en 2D. Para darle color a una línea, usa la función stroke(). Una línea no puede ser rellenada, por lo que la función fill() no afectará el color de una línea. Las líneas 2D son dibujadas con una ancho de un pixel por defecto, pero esto puede ser cambiado con la función strokeWeight().",
-      "params": ["Nummer: coordenada x del primer punto.",
-      "Nummer: coordenada y del primer punto.",
-      "Nummer: coordenada x del segundo punto.",
-      "Nummer: coordenada y del segundo punto."],
-      "returns": "the p5 object"
+      "description": "Tekent een lijn (een direct pad tussen twee punten) naar het scherm. De line() functie variant met vier parameters tekent de lijn in 2D. Gebruik de functie stroke() om een ​​lijn te kleuren. Een lijn kan niet worden gevuld, daarom heeft de functie fill() geen invloed op de kleur van een lijn. 2D-lijnen worden standaard getekend met een breedte van één pixel, maar dit kan worden gewijzigd met de functie strokeWeight().",
+      "params": ["Nummer: x-coördinaat van het eerste punt.",
+      "Nummer: y-coördinaat van het eerste punt.",
+      "Nummer: x-coördinaat van het tweede punt.",
+      "Nummer: y-coördinaat van het tweede punt.",
+      "Nummer: z-coördinaat van het eerste punt.",
+      "Nummer: z-coördinaat van het tweede punt."],
+      "returns": ""
     },
     "point": {
-      "description": "Dibuja un punto, una coordenada en el espacio de un pixel de dimensión. El primer parámetro es la coordenada horizontal del punto, el segundo valor es la coordenada vertical del punto. El color del punto es determinado por el trazado actual con la función stroke().",
-      "params": ["Nummer: coordenada x.",
-      "Nummer: coordenada y ."],
-      "returns": "the p5 object"
+      "description": "Tekent een punt op het canvas (één pixel). De eerste parameter is de horizontale (x) positie voor het punt, de tweede waarde is de verticale positie voor het punt. De kleur van het punt wordt bepaald door de huidige stroke() kleurwaarde.",
+      "params": ["Nummer: x-coördinaat.",
+      "Nummer: y-coördinaat.",
+      "Nummer: Z-coördinaat."],
+      "returns": ""
     },
     "quad": {
       "description": "Dibuja un cuadrilátero, un polígono de cuatro lados. Es similar a un rectángulo, pero los ángulos entre sus bordes no están limitados a noventa grados. El primer par de parámetros (x1, y1) corresponde a las coordenadas del primer vértice y los pares siguientes deben seguir en el mismo orden, según las manecillas del reloj o en contra, alrededor de la figura a definir.",
