@@ -1,14 +1,17 @@
 /*
  * @name Pie Chart
- * @description Uses the arc() function to generate a pie chart from the data 
- * stored in an array.
+ * @description De arc() wordt gebruikt om een taartdiagram te tekenen. De data 
+ * is opgeslagen in een array.
  */
+
+ // de data
 var angles = [ 30, 10, 45, 35, 60, 38, 75, 67 ];
 
 function setup() {
   createCanvas(720, 400);
   noStroke();
-  noLoop();  // Run once and stop
+  // De draw() functie eenmaal aanroepen
+  noLoop();
 }
 
 function draw() {
@@ -18,6 +21,7 @@ function draw() {
 
 function pieChart(diameter, data) {
   var lastAngle = 0;
+  // loop door alle punten van de data array
   for (var i = 0; i < data.length; i++) {
     var gray = map(i, 0, data.length, 0, 255);
     fill(gray);

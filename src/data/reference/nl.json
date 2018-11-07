@@ -15,7 +15,7 @@
   "reference-menu-books": "Boeken",
   "reference-menu-community": "Gemeenschap",
   "reference-menu-forum": "Forum",
-  "reference-description1": "v4 Kunt u niet vinden waarnaar u op zoek bent? Misschien staat het in de ",
+  "reference-description1": "Kunt u niet vinden waarnaar u op zoek bent? Misschien staat het in de ",
   "reference-description2": "of",
   "reference-description3": "U kunt hier een offline versie van de referentie ",
   "reference-description4": "downloaden",
@@ -109,10 +109,10 @@
     "color": {
       "description": "Creëert een kleurobject voor het opslaan in variabelen van het kleurdatatype. De parameters worden geïnterpreteerd als RGB- of HSB-waarden, afhankelijk van de huidige colorMode(). De standaardmodus is RGB-waarden van 0 tot 255 en daarom zal de functie aanroep Color(255, 204, 0) een felle gele kleur retourneren. <br><br>Als slechts één waarde aan Color() wordt gegeven, zal deze geïnterpreteerd worden als een grijsschaalwaarde. Voeg een tweede waarde toe en deze wordt gebruikt voor alpha-transparantie. Wanneer drie waarden zijn opgegeven, worden deze geïnterpreteerd als RGB- of HSB-waarden. Het toevoegen van een vierde waarde is van toepassing op alpha-transparantie.<br><br>Als een enkel-reeksargument wordt opgegeven, worden RGB-, RGBA- en Hex CSS-kleurstrings en alle genoemde kleurensets ondersteund. In dit geval wordt een alpha-getalwaarde als tweede argument niet ondersteund; het RGBA format moet worden gebruikt.",     
       "params": ["Nummer :getal dat de waarde tussen wit en zwart opgeeft.",
-      "Nummer: alpha-waarde ten opzichte van huidig ​​kleurenbereik (standaard is 0-255)",
-      "Nummer: rood of tint waarde ten opzichte van het huidige kleurbereik",
-      "Nummer: groen of verzadigingswaarde ten opzichte van het huidige kleurbereik",
-      "Nummer: blauwe of helderheidswaarde ten opzichte van het huidige kleurenbereik",
+      "Getal: alpha-waarde ten opzichte van huidig ​​kleurenbereik (standaard is 0-255)",
+      "Getal: rood of tint waarde ten opzichte van het huidige kleurbereik",
+      "Getal: groen of verzadigingswaarde ten opzichte van het huidige kleurbereik",
+      "Getal: blauwe of helderheidswaarde ten opzichte van het huidige kleurenbereik",
       "String :een kleurstring",
       "Nummer [] :een array met de rode, groene, blauwe en alpha-componenten van de kleur",
       "p5.Color object"],
@@ -130,9 +130,9 @@
      },
     "lerpColor": {
       "description": "Creërt een nieuwe kleur door het mengen van twee kleuren. De parameter amt bepaalt de mengverhouding (ïnterpolatie) tussen de twee kleurwaarden, waarbij 0.0 gelijk is aan de eerste kleur, 0.1 is zeer dicht bij de eerste kleur, 0.5 ligt halverwege tussen, enz. Een hoeveelheid onder 0 wordt behandeld als 0. Ook waarden 1 worden beperkt tot 1. Dit is anders dan het gedrag van lerp (), maar noodzakelijk omdat anders nummers buiten het bereik vreemde en onverwachte kleuren produceren.<br><br>De manier waarop kleuren worden geïnterpoleerd, is afhankelijk van de huidige kleurmodus.",
-      "params": ["Nummer: eerste kleur",
-      "Nummer: tweede kleur",
-      "Nummer: Mengverhouding tussen (waarde tussen 0.0 en 1.0"],
+      "params": ["Getal: eerste kleur",
+      "Getal: tweede kleur",
+      "Getal: Mengverhouding tussen (waarde tussen 0.0 en 1.0"],
       "returns": "p5.Color: het geinterpoleerde kleur object"
     },
     "lightness": {
@@ -154,11 +154,11 @@
       "description": "De functie background() stelt de kleur in die wordt gebruikt voor de achtergrond van het canvas p5.js. De standaardachtergrond is lichtgrijs. Deze functie wordt meestal gebruikt binnen Draw () om het displayvenster aan het begin van elk frame te wissen, maar het kan binnen setup () worden gebruikt om de achtergrond in het eerste frame van de animatie in te stellen of als de achtergrond slechts eenmaal hoeft te worden ingesteld.<br><br>De kleur wordt gespecificeerd in termen van de RGB-, HSB- of HSL-kleur, afhankelijk van de huidige colorMode. (De standaardkleurenruimte is RGB, met elke waarde in het bereik van 0 tot 255). Het alfanummer heeft ook een bereik van 0 tot 255.<br><br>Als een enkel tekenreeksargument wordt opgegeven, worden RGB-, RGBA- en Hex CSS-kleurstrings en alle genoemde kleurensets ondersteund. In dit geval wordt een alpha-getalwaarde als tweede argument niet ondersteund; het RGBA-formulier moet worden gebruikt.<br><br>Een p5.Color-object kan ook worden gebruikt om de achtergrondkleur in te stellen.<br><br>Een p5.Image kan ook worden gebruikt om een achtergrondafbeelding in te stellen.",
       "params": ["p5.Color: kleur van de background (object kan gecreëerd worden door de functie color())",
                "String: String welke een kleur beschrijft, mogelijke formaten omvatten: integer rg () of rgba(), percentage rgb() of rgba(), 3-cijferige hex, 6-cijferige hex",
-               "Nummer: opaciteit (dekking) van de achtergrond ten opzichte van het huidige kleurbereik (standaard is 0-255)",
-               "Nummer: specificeert een waarde tussen wit en zwart",
-               "Nummer: roodwaarde of tintwaarde (afhankelijk van de huidige kleurmodus)",
-               "Nummer: groene of verzadigingswaarde (afhankelijk van de huidige kleurmodus)",
-               "Nummer: blauwe of helderheidswaarde (afhankelijk van de huidige kleurmodus)",
+               "Getal: opaciteit (dekking) van de achtergrond ten opzichte van het huidige kleurbereik (standaard is 0-255)",
+               "Getal: specificeert een waarde tussen wit en zwart",
+               "Getal: roodwaarde of tintwaarde (afhankelijk van de huidige kleurmodus)",
+               "Getal: groene of verzadigingswaarde (afhankelijk van de huidige kleurmodus)",
+               "Getal: blauwe of helderheidswaarde (afhankelijk van de huidige kleurmodus)",
                "Nummer[]: een array met de rode, groene, blauwe en alpha-componenten van de kleur",
                "p5.Image: afbeelding aangemaakt mbv loadImage() of createImage(), in te stellen als achtergrond (moet dezelfde grootte hebben als het schetsvenster)"],
       "returns": ""
@@ -170,21 +170,21 @@
     "colorMode": {
       "description": "De colorMode() functie verandert de manier waarop p5.js kleurgegevens interpreteert. Standaard worden de parameters voor fill(), stroke(), background() en color() gedefinieerd door waarden tussen 0 en 255 met behulp van het RGB-kleurmodel. Dit komt overeen met het instellen van colorMode(RGB, 255). Met colorMode(HSB) kunt u in plaats daarvan het HSB-systeem gebruiken. Standaard is dit colorMode (HSB, 360, 100, 100, 1). U kunt ook HSL gebruiken.<br><br>Opmerking: bestaande kleurenobjecten onthouden de modus waarin ze zijn gemaakt, zodat u modi kunt wijzigen zoals u wilt zonder het uiterlijk van bestaande objecten te beïnvloeden.",
       "params": ["Constante :RGB, HSB of HSL, corresponderend met Rood/Groen/Blauw en Tint/Verzadiging/Helderheid (of Lichtheid)",
-      "Nummer: bereik voor alle waarden.",
-      "Nummer: bereik voor rood of tint, afhankelijk van de huidige kleurmodus.",
-      "Nummer: bereik voor groen of verzadiging, afhankelijk van de huidige kleurmodus.",
-      "Nummer: bereik voor blauw of helderheid / lichtheid, afhankelijk van de huidige kleurmodus.",
-      "Nummer: bereik voor de alpha."],
+      "Getal: bereik voor alle waarden.",
+      "Getal: bereik voor rood of tint, afhankelijk van de huidige kleurmodus.",
+      "Getal: bereik voor groen of verzadiging, afhankelijk van de huidige kleurmodus.",
+      "Getal: bereik voor blauw of helderheid / lichtheid, afhankelijk van de huidige kleurmodus.",
+      "Getal: bereik voor de alpha."],
       "returns": ""
     },
     "fill": {
       "description": "Stelt de kleur in die wordt gebruikt om vormen in te kleuren. Als u bijvoorbeeld fill(204, 102, 0) uitvoert, worden alle nieuwe vormen gevuld met oranje. Deze kleur wordt gespecificeerd in termen van de RGB- of HSB-kleur, afhankelijk van de huidige colorMode (). (De standaardkleurenruimte is RGB, met elke waarde in het bereik van 0 tot 255). De alpha waarde is standaard ook 0 tot 255.<bt><br>Ook kan ene string worden meegegeven aan de fill functie, dit kan een voor gedefinieerde kleur zijn, een RGB,RGBA of  Hex CSS-kleurstrings zijn. In deze situatie wordt een optionele een alpha waarde als tweede argument niet ondersteund; het RGBA-formulier moet worden gebruikt.<br><br>Ook is het mogelijk een p5.Color object als argument te gebruiken voor de fill functie.",      
-      "params": [ "Nummer: rood of tint waarde ten opzichte van het huidige kleurbereik",
-        "Nummer: groen of verzadigingswaarde ten opzichte van het huidige kleurbereik",
-        "Nummer: blauwe of helderheidswaarde ten opzichte van het huidige kleurbereik",
-        "Nummer: bereik voor de alpha.",
+      "params": [ "Getal: rood of tint waarde ten opzichte van het huidige kleurbereik",
+        "Getal: groen of verzadigingswaarde ten opzichte van het huidige kleurbereik",
+        "Getal: blauwe of helderheidswaarde ten opzichte van het huidige kleurbereik",
+        "Getal: alpha waarde",
         "String: String welke een kleur beschrijft, mogelijke formaten omvatten: integer rg () of rgba(), percentage rgb() of rgba(), 3-cijferige hex, 6-cijferige hex",
-        "Nummer: grijswaarde (0..255)",
+        "Getal: grijswaarde (0..255)",
         "Nummer[]: een array met een rood, groen, blauw kleurwaarde en een alpha waarde",
         "p5.Color: kleur object"],
       "returns": ""
@@ -198,84 +198,87 @@
       "returns": ""
     },
     "stroke": {
-      "description": "Define el color usado para dibujar líneas y bordes de figuras. Este color especificado en términos de color RGB o HSB, dependiendo del modo de color actual según colorMode() (el dominio de color por defecto es RGB, con cada valor en el rango entre 0 y 255). Si se provee un argumento tipo string, los tipos RGB, RGBA y CSS hexadecimal están soportados. Un objeto Color p5 puede ser provisto para definir el color del trazado.",
-      "params": ["Nummer|Arreglo|String|p5.Color: valor de gris, rojo, tinte (dependiendo del modo de color actual), o arreglo de color, o string de color CSS.",
-      "Nummer: valor de verde o saturación (dependiendo del modo de color actual)",
-      "Nummer: valor de azul o brillo (dependiendo del modo de color actual)",
-      "Nummer: opacidad del fondo"],
+      "description": "Bepaalt de kleur die gebruikt wordt om lijnen en randen van figuren te tekenen. Deze kleur wordt opgegeven in RGB- of HSB-kleur, afhankelijk van de huidige kleurmodus (ingesteld met colorMode(), default is RGB met elke waarde tussen 0 en 255). Als een argument van het type string wordt opgegeven, worden de RGB-, RGBA- en hexadecimale CSS-typen ondersteund. U kunt een p5.Color object opgeven om de kleur van het pad te definiëren.",
+      "params": ["Nummer|Samenstelling|String|p5.Color: waarde van grijs, rood, tint (afhankelijk van de huidige kleurmodus), of CSS-kleur string.",
+      "Getal: groen of verzadigingswaarde (afhankelijk van de huidige kleurmodus)",
+      "Getal: waarde van blauw of helderheid (afhankelijk van de huidige kleurenmodus)",
+      "Getal: alpha waarde",
+      "String :een kleurstring",
+      "Getal: grijswaarde (0..255)",
+      "Getal[]: een array met een rood, groen, blauw kleurwaarde en alpha kleur waarde"],
       "returns": ""
     },
-    "_arc": {
-      "description": "Dibuja un arco en la pantalla. Si se llama con solo a, b, c, d, start y stop, el arco se dibuja como un pastel abierto. Si el modo se provee, el arco será dibujado abierto, o como acorde, o como pastel, según lo especificado. El origen puede ser cambiado con la función ellipseMode(). Nota que si dibujas un círculo completo (ej: 0 a TWO_PI) aparecerá en blanco, porque 0 y TWO_PI son la misma posición en el círculo unitario. La mejor manera de manejar esto es usar la función ellipse() para una elipse cerrada, y la función arc() para generar solo secciones de una elipse.",
-      "params": ["Nummer: coordenada x del arco de elipse.",
-      "Nummer: coordenada y del arco de elipse.",
-      "Nummer: ancho del arco de elipse.",
-      "Nummer: altura del arco de elipse.",
-      "Nummer: ángulo inicial del arco de elipse.",
-      "Nummer: ángulo final del arco de elipse.",
-      "Constante: parámetro opcional para determinar la manera de dibujar el arco."],
+    "arc": {
+      "description": "De arc() functie tekent een boog naar het scherm. Als alleen x, y, w, h, start en stop parameters worden meegegeven bij de aanroep, wordt de boog getekend en opgevuld als een open cirkelsegment. Als er een modusparameter is meegegeven, wordt de boog gevuld als:<br>een open halve cirkel (OPEN)<br>een gesloten halve cirkel (CHORD)<br>als een gesloten cirkelsegment (PIE)<br>De oorsprong kan worden gewijzigd met de functie ellipseMode().<br><br> Merk op dat het tekenen van een volledige cirkel (ex: 0 tot TWO_PI) leeg zal zijn omdat 0 en TWO_PI dezelfde positie op de eenheidscirkel zijn. De beste manier om dit aan te pakken, is door in plaats daarvan de functie ellipse() te gebruiken om een ​​gesloten ellips te maken en om de arc() functie alleen te gebruiken om delen van een ovaal te tekenen.",
+      "params": ["Getal: x-coördinaat van de boog",
+      "Getal: y-coördinaat van de boog",
+      "Getal: breedte van de boog",
+      "Getal: hoogte van de boog",
+      "Getal: starthoek van de boog",
+      "Getal: eindhoek van de boog",
+      "Constant :optionele parameter om de manier van tekenen van de boog te wijzigen. ondersteunde mogelijkheden: CHORD, PIE of OPEN"],
       "returns": ""
     },
     "ellipse": {
       "description": "Tekent een ellips (ovaal) naar het scherm. Een ellips met gelijke breedte en hoogte is een cirkel. Standaard bepalen de eerste twee parameters de locatie en bepalen de derde en vierde parameters de breedte en hoogte van de vorm in. Als er geen hoogte is opgegeven, wordt de breedte gebruikt voor zowel de breedte als de hoogte. Als een negatieve hoogte of breedte is opgegeven, wordt de absolute waarde genomen. De oorsprong kan worden gewijzigd met de functie ellipseMode ().",
-      "params": ["Nummer: x-coördinaat van het eerste punt.",
-      "Nummer: x-coördinaat van het eerste punt.",
-      "Nummer: breedte van de ellips.",
-      "Nummer: hoogte van de ellips.",
+      "params": ["Getal: x-coördinaat van het eerste punt.",
+      "Getal: x-coördinaat van het eerste punt.",
+      "Getal: breedte van de ellips.",
+      "Getal: hoogte van de ellips.",
       "Integer: aantal radiale sectoren wat wordt gebruikt om de ellips te tekenen (hoger getal = meer detail)."],
       "returns": ""
     },
     "line": {
       "description": "Tekent een lijn (een direct pad tussen twee punten) naar het scherm. De line() functie variant met vier parameters tekent de lijn in 2D. Gebruik de functie stroke() om een ​​lijn te kleuren. Een lijn kan niet worden gevuld, daarom heeft de functie fill() geen invloed op de kleur van een lijn. 2D-lijnen worden standaard getekend met een breedte van één pixel, maar dit kan worden gewijzigd met de functie strokeWeight().",
-      "params": ["Nummer: x-coördinaat van het eerste punt.",
-      "Nummer: y-coördinaat van het eerste punt.",
-      "Nummer: x-coördinaat van het tweede punt.",
-      "Nummer: y-coördinaat van het tweede punt.",
-      "Nummer: z-coördinaat van het eerste punt.",
-      "Nummer: z-coördinaat van het tweede punt."],
+      "params": ["Getal: x-coördinaat van het eerste punt.",
+      "Getal: y-coördinaat van het eerste punt.",
+      "Getal: x-coördinaat van het tweede punt.",
+      "Getal: y-coördinaat van het tweede punt.",
+      "Getal: z-coördinaat van het eerste punt.",
+      "Getal: z-coördinaat van het tweede punt."],
       "returns": ""
     },
     "point": {
       "description": "Tekent een punt op het canvas (één pixel). De eerste parameter is de horizontale (x) positie voor het punt, de tweede waarde is de verticale positie voor het punt. De kleur van het punt wordt bepaald door de huidige stroke() kleurwaarde.",
-      "params": ["Nummer: x-coördinaat.",
-      "Nummer: y-coördinaat.",
-      "Nummer: Z-coördinaat."],
+      "params": ["Getal: x-coördinaat.",
+      "Getal: y-coördinaat.",
+      "Getal: Z-coördinaat."],
       "returns": ""
     },
-    "_quad": {
-      "description": "Dibuja un cuadrilátero, un polígono de cuatro lados. Es similar a un rectángulo, pero los ángulos entre sus bordes no están limitados a noventa grados. El primer par de parámetros (x1, y1) corresponde a las coordenadas del primer vértice y los pares siguientes deben seguir en el mismo orden, según las manecillas del reloj o en contra, alrededor de la figura a definir.",
-      "params": ["Nummer: coordenada x del primer punto.",
-      "Nummer: coordenada y del primer punto.",
-      "Nummer: coordenada x del segundo punto.",
-      "Nummer: coordenada y del segundo punto.",
-      "Nummer: coordenada x del tercer punto.",
-      "Nummer: coordenada y del tercer punto.",
-      "Nummer: coordenada x del cuarto punto.",
-      "Nummer: coordenada y del cuarto punto."],
-      "returns": "the p5 object"
+    "quad": {
+      "description": "De quad functie tekent een vierzijdige veelhoek. Het lijkt op een rechthoek, maar de hoeken tussen de randen zijn niet beperkt tot negentig graden. Het eerste paar parameters (x1, y1) stelt de eerste punt in en de volgende paren bepalen, met de klok mee of tegen de klok in, de hoekpunten van de vierhoek.",
+      "params": ["Getal: het x-coördinaat van het eerste punt.",
+      "Getal: het y-coördinaat van het eerste punt.",
+      "Getal: het x-coördinaat van het tweede punt.",
+      "Getal: het y-coördinaat van het tweede punt.",
+      "Getal: het x-coördinaat van het derde punt.",
+      "Getal: het y-coördinaat van het derde punt.",
+      "Getal: het x-coördinaat van het vierde punt.",
+      "Getal: het y-coördinaat van het vierde punt."],
+      "returns": ""
     },
-    "_rect": {
-      "description": "Dibuja un rectángulo en la pantalla. Un rectángulo es una figura de cuatro lados con cada ángulo interior de noventa grados. Por defecto, los dos primeros parámetros definen la ubicación de la esquina superior izquierda, el tercero el ancho y el cuarto la altura. La manera en que estos parámetros son interpretados, sin embargo, puede ser cambiado con la función rectMode(). Los parámetros quinto, sexto, séptimo y octavo, si son especificados, determinan el radio de la esquina superior derecha, superior izquierda, inferior derecha e inferior izquierda, respectivamente. Si se omite un parámetro de radio de esquina, se usa el radio especificado por el valor anterior en la lista.",
-      "params": ["Nummer: coordenada x del rectángulo.",
-      "Nummer: coordenada y del rectángulo.",
-      "Nummer: ancho del rectángulo.",
-      "Nummer: altura del rectángulo.",
-      "Nummer: radio opcional de la esquina superior izquierda.",
-      "Nummer: radio opcional de la esquina superior derecha.",
-      "Nummer: radio opcional de la esquina inferior derecha.",
-      "Nummer: radio opcional de la esquina inferior izquierda.",
-      "Nummer:",
-      "Nummer:"],
-      "returns": "el objeto p5"
+    "rect": {
+      "description": "Tekent een rechthoek naar het scherm. Een rechthoek is een vierzijdige vorm waarbij iedere hoek haaks is (90 graden). Bij default bepalen de eerste twee parameters de locatie van de linkerbovenhoek, de derde de breedte en de vierde de hoogte bepaalt. De manier waarop deze parameters worden geïnterpreteerd, kan echter worden gewijzigd met de functie rectMode().<br><br>De vijfde, zesde, zevende en achtste parameters bepalen, indien opgegeven, de hoekradius voor de vier hoekpunten. Een weggelaten hoekradiusparameter wordt ingesteld op de waarde van de eerder opgegeven radiuswaarde in de parameterlijst.",
+      "params": ["Getal: x-coördinaat van de rechthoek.",
+      "Getal: y-coördinaat van de rechthoek.",
+      "Getal: breedte van de rechthoek.",
+      "Getal: hoogte van de rechthoek.",
+      "Getal: optionele straal van de linkerbovenhoek.",
+      "Getal: optionele straal van de rechterbovenhoek.",
+      "Getal: optionele straal van de rechteronderhoek.",
+      "Getal: optionele straal van de linkeronderhoek.",
+      "Getal: Integer :aantal segmenten in de x-richting.",
+      "Getal: Integer :aantal segmenten in de y-richting."],
+      "returns": ""
     },
     "_triangle": {
       "description": "Un triángulo es un plano creado por la conexión de tres puntos. Los primeros dos argumentos especifican el primer punto, los parámetros centrales especifican el segundo punto, y los dos últimos parámetros especifican el tercer punto.",
-      "params": ["Nummer: coordenada x del primer punto.",
-      "Nummer: coordenada y del primer punto.",
-      "Nummer: coordenada x del segundo punto.",
-      "Nummer: coordenada y del segundo punto.",
-      "Nummer: coordenada x del tercer punto.",
-      "Nummer: coordenada y del tercer punto."],
+      "params": ["Getal: coordenada x del primer punto.",
+      "Getal: coordenada y del primer punto.",
+      "Getal: coordenada x del segundo punto.",
+      "Getal: coordenada y del segundo punto.",
+      "Getal: coordenada x del tercer punto.",
+      "Getal: coordenada y del tercer punto."],
       "returns": "the p5 object"
     },
     "_ellipseMode": {
@@ -290,98 +293,98 @@
     "_rectMode": {
       "description": "Modifica la ubicación en que los rectángulos son dibujados, cambiando la manera en que los parámetros dados a rect() son interpretados. El modo por defecto es rectMode(CORNER), que interpreta los primeros dos parámetros de rect() como la esquina superior izquierda de la figura, mientras que los parámetros tercero y cuarto son su ancho y altura. rectMode(CORNERS) interpreta los dos primeros parámetros de rect() como la ubicación de una esquina, y los parámetros tercero y cuarto como la ubicación de la esquina opuesta. rectMode(CENTER) interpreta los dos primeros parámetros de rect() como el punto central de la figura, mientas que los parámetros tercero y cuarto son su ancho y altura. rectMode(RADIUS) también usa los dos primeros parámetros de rect()= como el punto central de la figura, pero usa los parámetros tercero y cuarto para especificar la mitad del ancho y la altura de la figura. Los parámetros deben ser escritos en MAYÚSCULAS porque Javascript es un lenguaje que distingue entre mayúsculas y minúsculas.",
       "params": ["Constante: puede ser CORNER, CORNERS, CENTER, o RADIUS."],
-      "returns": "the p5 object"
+      "returns": ""
     },
     "_smooth": {
       "description": "Dibuja todas las figuras geométricas con bordes suaves (sin aliasing). smooth() también mejorará la calidad de las imágenes cuyo tamaño ha sido modificado. Notar que smooth() está activo por defecto; noSmooth() puede ser usado para deshabilitar el suavizado de las figuras geométricas, imágenes y tipografía.",
-      "returns": "the p5 object"
+      "returns": ""
     },
     "_strokeCap": {
       "description": "Define el estilo de rendering de los extremos de las líneas. Estos extremos pueden ser cuadrados, extendidos o redondeados, cada uno de estos especifados con los parámetros correspondientes: SQUARE, PROJECT, y ROUND. El extremo por defecto es redonedeado (ROUND).",
       "params": ["Constante: puede ser SQUARE, PROJECT, o ROUND."],
-      "returns": "the p5 object"
+      "returns": ""
     },
-    "_strokeJoin": {
-      "description": "Define el estilo de las uniones que conectan segmentos de líneas. Estas uniones pueden ser tipo inglete, biseladas o redondeadas, y especificadas con los parámetros correspondientes: MITER, BEVEL, y ROUND. La unión por defecto es MITER.",
-      "params": ["Constante: puede ser MITER, BEVEL, o ROUND."],
-      "returns": "the p5 object"
+    "strokeJoin": {
+      "description": "Stelt de verbindings stijl in van lijnsegmenten die met elkaar worden verbonden. Deze verbindingen zijn verstek, afgeschuind of afgerond en gespecificeerd met de overeenkomstige parameters MITER, BEVEL en ROUND. De default is MITER.",
+      "params": ["Constante: MITER, BEVEL of ROUND."],
+      "returns": ""
     },
-    "_strokeWeight": {
-      "description": "Define el ancho del trazo usado para dibujar líneas, puntos y los bordes de las figuras geométricas. Todos los anchos son medidos en pixeles.",
-      "params": ["Nummer: el peso (en pixeles) del trazado"],
-      "returns": "the p5 object"
+    "strokeWeight": {
+      "description": "Stelt de breedte in van de lijn die wordt gebruikt voor tekenen van lijnen, punten en andere vormen. De eenheid van de breedte is een pixel.",
+      "params": ["Getal: De breedte van de lijn (in pixels)"],
+      "returns": ""
     },
     "_bezier": {
       "description": "Dibuja una curva Bezier cúbica en la pantalla. Estas curvas están definidas por una serie de puntos ancla y de control. Los primeros dos parámetros especifican el primer punto ancla y los dos últimos especifican el otro punto ancla, que se convierten en los puntos primero y último de la curva. Los parámetros en el medio especifican los dos puntos de control que definen la forma de la curva. De forma aproximada, los puntos de control atraen la curva hacia ellos. Las curvas Bezier fueron desarrolladas por el ingeniero automotriz Pierre Bezier, y son comúnmente usadas en gráficas computacionales para definir curvas de pendiente suave. Ver también curve().",
-      "params": ["Nummer: coordenada x del primer punto ancla",
-      "Nummer: coordenada y del primer punto ancla",
-      "Nummer: coordenada x del primer punto de control",
-      "Nummer: coordenada y del primer punto de control",
-      "Nummer: coordenada x del segundo punto de control",
-      "Nummer: coordenada y del segundo punto de control",
-      "Nummer: coordenada x del segundo punto ancla",
-      "Nummer: coordenada y del segundo punto ancla",
-      "Nummer: coordenada z del primer punto ancla",
-      "Nummer: coordenada z del primer punto de control",
-      "Nummer: coordenada z del segundo punto ancla",
-      "Nummer: coordenada z del segundo punto de control"],
+      "params": ["Getal: coordenada x del primer punto ancla",
+      "Getal: coordenada y del primer punto ancla",
+      "Getal: coordenada x del primer punto de control",
+      "Getal: coordenada y del primer punto de control",
+      "Getal: coordenada x del segundo punto de control",
+      "Getal: coordenada y del segundo punto de control",
+      "Getal: coordenada x del segundo punto ancla",
+      "Getal: coordenada y del segundo punto ancla",
+      "Getal: coordenada z del primer punto ancla",
+      "Getal: coordenada z del primer punto de control",
+      "Getal: coordenada z del segundo punto ancla",
+      "Getal: coordenada z del segundo punto de control"],
       "returns": "the p5 object"
     },
     "_bezierPoint": {
       "description": "Evalua la curva Bezier en la posición t para los puntos a, b, c, d. Los parámetros a y d son los puntos primero y último de la curva, mientras que b y c son los puntos de control. El parámetro final t varía entre 0 y 1. Esto puede ser realizado una vez con las coordenadas x y una segunda vez con las coordenadas y para obtener la ubicación de la curva Bezier en t.",
-      "params": ["Nummer: coordenada del primer punto de la curva",
-      "Nummer: coordenada del primer punto de control de la curva",
-      "Nummer: coordenada del segundo punto de control de la curva",
-      "Nummer: coordenada del segundo punto de la curva",
-      "Nummer: valor entre 0 y 1"],
+      "params": ["Getal: coordenada del primer punto de la curva",
+      "Getal: coordenada del primer punto de control de la curva",
+      "Getal: coordenada del segundo punto de control de la curva",
+      "Getal: coordenada del segundo punto de la curva",
+      "Getal: valor entre 0 y 1"],
       "returns": "el valor de la curva Bezier en la posición t"
     },
     "_bezierTangent": {
       "description": "Evalua la tangente de la curva Bezier en la posición t para los puntos a, b, c, d. Los parámetros a y d son los puntos primero y último de la curva, mientras que b y c son los puntos de control. El parámetro final t varía entre 0  1.",
-      "params": ["Nummer: coordenada del primer punto de la curva",
-      "Nummer: coordenada del primer punto de control de la curva",
-      "Nummer: coordenada del segundo punto de control de la curva",
-      "Nummer: coordenada del segundo punto de la curva",
-      "Nummer: valor entre 0 y 1"],
+      "params": ["Getal: coordenada del primer punto de la curva",
+      "Getal: coordenada del primer punto de control de la curva",
+      "Getal: coordenada del segundo punto de control de la curva",
+      "Getal: coordenada del segundo punto de la curva",
+      "Getal: valor entre 0 y 1"],
       "returns": "la tangente en la posición t"
     },
     "_curve": {
       "description": "Dibuja una línea curva en la pantalla entre dos puntos, dados como los cuatro parámetros centrales. Los dos primeros puntos son un punto de control, como si la curva viniera desde este punto, aunque no sea dibujado. Los dos últimos parámetros de forma similar describen el otro punto de control. SE pueden cerar curvas más largas, por medio del posicionamiento de varias funciones curve() juntas o usando curveVertex(). Una función adicional llamada curveTightness() provee control de la calidad visual de la curva. La función curve() es una implementación de la Catmull-Rom spline.",
-      "params": ["Nummer: coordenada x del punto de control inicial",
-      "Nummer: coordenada y del punto de control inicial",
-      "Nummer: coordenada x del primer punto",
-      "Nummer: coordenada y del primer punto",
-      "Nummer: coordenada x del segundo punto",
-      "Nummer: coordenada y del segundo punto",
-      "Nummer: coordenada x del punto de control final",
-      "Nummer: coordenada y del punto de control final",
-      "Nummer: coordenada z del punto de control inicial",
-      "Nummer: coordenada z del primer punto",
-      "Nummer: coordenada z del segundo punto",
-      "Nummer: coordenada z del punto de control final"],
+      "params": ["Getal: coordenada x del punto de control inicial",
+      "Getal: coordenada y del punto de control inicial",
+      "Getal: coordenada x del primer punto",
+      "Getal: coordenada y del primer punto",
+      "Getal: coordenada x del segundo punto",
+      "Getal: coordenada y del segundo punto",
+      "Getal: coordenada x del punto de control final",
+      "Getal: coordenada y del punto de control final",
+      "Getal: coordenada z del punto de control inicial",
+      "Getal: coordenada z del primer punto",
+      "Getal: coordenada z del segundo punto",
+      "Getal: coordenada z del punto de control final"],
       "returns": "Objeto: el objeto p5"
     },
     "_curveTightness": {
       "description": "Modifica la calidad de las formas creadas con curve() y curveVertex(). El parámetro tightness (tirantez) determina cómo la curva calza con los vértices. El valor 0.0 es el valor por defecto (este valor define las curvas Spline Catmull-Rom) y el valor 1.0 conecta todos los puntos con líneas rectas. Valores en el rango entre -5.0 y 5.0 deformarán las curvas pero las dejarán reconocibles, y a medida que los valores crecen en magnitud, se continuarán deformando.",
-      "params": ["Nummer: deformación de los vértices originales"],
+      "params": ["Getal: deformación de los vértices originales"],
       "returns": "the p5 object"
     },
     "_curvePoint": {
       "description": "Evalua la curva en la posición t para los puntos a, b, c, d. El parámetro t varía entre 0 y 1, los puntos a y d son puntos en la cruva, y b y c son los puntos de control. Esto puede ser hecho una vez con las coordenadas x y una segunda vez con las coordenadas y para obtener la ubicación de la curva en t.",
-      "params": ["Nummer: coordenada del primer punto de la curva",
-        "Nummer: coordenada del primer punto de control de la curva",
-        "Nummer: coordenada del segundo punto de control de la curva",
-        "Nummer: coordenada del segundo punto de la curva",
-        "Nummer: valor entre 0 y 1"],
+      "params": ["Getal: coordenada del primer punto de la curva",
+        "Getal: coordenada del primer punto de control de la curva",
+        "Getal: coordenada del segundo punto de control de la curva",
+        "Getal: coordenada del segundo punto de la curva",
+        "Getal: valor entre 0 y 1"],
       "returns": "the p5 object"
     },
     "_curveTangent": {
       "description": "Evalua la tangente de la curva en la posición t para los puntos a, b, c, d. El parámetro t varía entre 0 y 1, a y d son los puntos de la curva, b y c son los puntos de control.",
-      "params": ["Nummer: coordenada del primer punto de la curva",
-        "Nummer: coordenada del primer punto de control de la curva",
-        "Nummer: coordenada del segundo punto de control de la curva",
-        "Nummer: coordenada del segundo punto de la curva",
-        "Nummer: valor entre 0 y 1"],
+      "params": ["Getal: coordenada del primer punto de la curva",
+        "Getal: coordenada del primer punto de control de la curva",
+        "Getal: coordenada del segundo punto de control de la curva",
+        "Getal: coordenada del segundo punto de la curva",
+        "Getal: valor entre 0 y 1"],
       "returns": "la tangente en la posición t"
     },
     "_beginContour": {
@@ -395,18 +398,18 @@
     },
     "_bezierVertex": {
       "description": "Especifica las coordenadas de un vértice para una curva Bezier. Cada llamada a la función bezierVertex() define la posición de dos puntos de control y un punto ancla de una curva Bezier, añadiendo un nuevo segmento a la línea o figura. La primera vez que bezierVertex() es usada dentro de una llamada a beginShape(), debe ser antecedida por una llamada a la función vertex() para definir el primer punto ancla. Esta función debe ser usada entre beginShape() y endShape() y solo cuando no se ha especificado el parámetro MODE (modo) a beginShape().",
-      "params": ["Nummer: coordenada x del primer punto de control la curva",
-        "Nummer: coordenada y del primer punto de control la curva",
-        "Nummer: coordenada x del segundo punto de control la curva",
-        "Nummer: coordenada y del segundo punto de control la curva",
-        "Nummer: coordenada x del primer punto ancla",
-        "Nummer: coordenada y del primer punto ancla"],
+      "params": ["Getal: coordenada x del primer punto de control la curva",
+        "Getal: coordenada y del primer punto de control la curva",
+        "Getal: coordenada x del segundo punto de control la curva",
+        "Getal: coordenada y del segundo punto de control la curva",
+        "Getal: coordenada x del primer punto ancla",
+        "Getal: coordenada y del primer punto ancla"],
       "returns": "el objeto p5"
     },
     "_curveVertex": {
       "description": "Especifica las coordenadas de un vértice para una curva. Esta función solo puede ser usada entre beginShape() y endShape() y cuando no se ha especificado el parámetro MODE en la función beginShape(). Los puntos primero y último en una serie de líneas curveVertex() serán usados para guiar el inicio y final de una curva. Un mínimo de cuatro puntos es requerido para dibujar una pequeña curva entre los puntos segundo y tercero, Añadir un quinto punto con curveVertex() dibujará la curva entre los puntos segundo, tercero y cuarto. La función curveVertex() es una implementación de las splines de Catmull-Rom.",
-      "params": ["Nummer: coordenada x del vértice",
-        "Nummer: coordenada y del vértice"],
+      "params": ["Getal: coordenada x del vértice",
+        "Getal: coordenada y del vértice"],
       "returns": "el objeto p5"
     },
     "_endContour": {
@@ -420,16 +423,16 @@
     },
     "_quadraticVertex": {
       "description": "Especifica las coordenadas de vértices par curvas Bezier cuadráticas. Cada llamada a quadraticVertex() define la posición de uno de los puntos de control y ancla de una curva Bezier, añadiendo un nuevo segmento a la línea o figura. La primera vez que quadraticVertex() es usada dentro de una llamada a beginShape(), debe ser precedida por una llamada a la función vertex() para definir el primer punto ancla. Esta función debe ser usada entre un par beginShape() y endShape() y solo cuando no se ha especificado el parámetro MODE de beginShape().",
-      "params": ["Nummer: coordenada x del punto de control",
-        "Nummer: coordenada y del punto de control",
-        "Nummer: coordenada x del punto ancla",
-        "Nummer: coordenada y del punto ancla"],
+      "params": ["Getal: coordenada x del punto de control",
+        "Getal: coordenada y del punto de control",
+        "Getal: coordenada x del punto ancla",
+        "Getal: coordenada y del punto ancla"],
       "returns": "el objeto p5"
     },
     "_vertex": {
       "description": "Todas las figuras son construidas mediante la conexión de una serie de vértices. vertex() es usado para especificar las coordenadas de los vértices para puntos, líneas, triángulos, cuadriláteros y polígonos. Es usada exclusivamente dentro de un par de funciones beginShape() y endShape().",
-      "params": ["Nummer: coordenada x del vértice",
-        "Nummer: coordenada y del vértice"],
+      "params": ["Getal: coordenada x del vértice",
+        "Getal: coordenada y del vértice"],
       "returns": "el objeto p5"
     },
     "_loadModel": {
@@ -447,81 +450,81 @@
     },
     "_plane": {
       "description": "Dibuja un plano con ancho y altura dados.",
-      "params": ["Nummer: ancho del plano",
-      "Nummer: altura del plano",
-      "Nummer: Nummer opcional de subdivisiones triangulares en la dimensión x",
-      "Nummer: Nummer opcional de subdivisiones triangulares en la dimensión y"],
+      "params": ["Getal: ancho del plano",
+      "Getal: altura del plano",
+      "Getal: Nummer opcional de subdivisiones triangulares en la dimensión x",
+      "Getal: Nummer opcional de subdivisiones triangulares en la dimensión y"],
       "returns": "el objeto p5"
     },
     "_box": {
       "description": "Dibuja una caja con ancho, altura y profundidad dados.",
-      "params": ["Nummer: ancho de la caja",
-      "Nummer: altura de la caja",
-      "Nummer: profundidad de la caja",
-      "Nummer: Nummer opcional de subdivisiones triangulares en la dimensión x",
-      "Nummer: Nummer opcional de subdivisiones triangulares en la dimensión y"],
+      "params": ["Getal: ancho de la caja",
+      "Getal: altura de la caja",
+      "Getal: profundidad de la caja",
+      "Getal: Nummer opcional de subdivisiones triangulares en la dimensión x",
+      "Getal: Nummer opcional de subdivisiones triangulares en la dimensión y"],
       "returns": "el objeto p5"
     },
     "_sphere": {
       "description": "Dibuja una esfera de radio dado.",
-      "params": ["Nummer: radio del círculo",
-      "Nummer: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 24",
-      "Nummer: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 16"],
+      "params": ["Getal: radio del círculo",
+      "Getal: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 24",
+      "Getal: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 16"],
       "returns": "el objeto p5"
     },
     "_cylinder": {
       "description": "Dibuja un cilindro de radio y altura dados.",
-      "params": ["Nummer: radio de la superficie",
-      "Nummer: altura del cilindro",
-      "Nummer: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 24",
-      "Nummer: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 16"],
+      "params": ["Getal: radio de la superficie",
+      "Getal: altura del cilindro",
+      "Getal: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 24",
+      "Getal: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 16"],
       "returns": "el objeto p5"
     },
     "_cone": {
       "description": "Dibuja un cono de radio y altura dados.",
-      "params": ["Nummer: radio de la superficie inferior",
-      "Nummer: altura del cono",
-      "Nummer: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 24",
-      "Nummer: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 16"],
+      "params": ["Getal: radio de la superficie inferior",
+      "Getal: altura del cono",
+      "Getal: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 24",
+      "Getal: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 16"],
       "returns": "el objeto p5"
     },
     "_ellipsoid": {
       "description": "Dibuja un elipsoide de radio dado.",
-      "params": ["Nummer: radio x del círculo",
-      "Nummer: radio y del círculo",
-      "Nummer: radio z del círculo",
-      "Nummer: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 24. Evita Nummers mayores a 150 que podrían colapsar el navegador.",
-      "Nummer: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 16. Evita Nummers mayores a 150 que podrían colapsar el navegador."],
+      "params": ["Getal: radio x del círculo",
+      "Getal: radio y del círculo",
+      "Getal: radio z del círculo",
+      "Getal: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 24. Evita Nummers mayores a 150 que podrían colapsar el navegador.",
+      "Getal: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 16. Evita Nummers mayores a 150 que podrían colapsar el navegador."],
       "returns": "el objeto p5"
     },
     "_torus": {
       "description": "Dibuja un toroide con radio y tubo dado.",
-      "params": ["Nummer: radio del anillo completo",
-      "Nummer: radio del tubo",
-      "Nummer: radio z del círculo",
-      "Nummer: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 24.",
-      "Nummer: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 16."],
+      "params": ["Getal: radio del anillo completo",
+      "Getal: radio del tubo",
+      "Getal: radio z del círculo",
+      "Getal: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 24.",
+      "Getal: opcional, Nummer de segmentos, a mayor Nummer de segmentos la geometría es más suave, por defecto es 16."],
       "returns": "el objeto p5"
     },
-    "_HALF_PI": {
-      "description": "HALF_PI es una constante matemática de valor 1.57079632679489661923. Es la mitad de la razón entre la circunferencia de un círculo y su diámetro. Es útil en combinación con las funciones trigonométricas sin() y cos().",
-      "returns": "el objeto p5"
+    "HALF_PI": {
+      "description": "HALF_PI is een wiskundige constante met de waarde 1.57079632679489661923. De verhouding (halve  circel omtrek)/(diameter) komt overeen met HALF_PI. De constante wordt veel gebruikt in combinatie met de trigonometrische functies sin () en cos ().",
+      "returns": ""
     },
-    "_PI": {
-      "description": "PI es una constante matemática de valor 3.14159265358979323846. Es la razón entre la circunferencia de un círculo y su diámetro. Es útil en combinación con las funciones trigonométricas sin() y cos().",
-      "returns": "el objeto p5"
+    "PI": {
+      "description": "PI is een wiskundige constante met de waarde 3.14159265358979323846. De verhouding (circel omtrek)/(diameter) komt overeen met PI. De constante wordt veel gebruikt in combinatie met de trigonometrische functies sin () en cos ().",
+      "returns": ""
     },
     "QUARTER_PI": {
-      "description": "QUARTER_PI es una constante matemática de valor 0.7853982. Es un cuarto de la razón entre la circunferencia de un círculo y su diámetro. Es útil en combinación con las funciones trigonométricas sin() y cos().",
-      "returns": "el objeto p5"
+      "description": "QUARTER_PI is een wiskundige constante met de waarde 0.7853982. De verhouding (kwart circel omtrek)/(diameter) komt overeen met QAURTER_PI. De constante wordt veel gebruikt in combinatie met de trigonometrische functies sin () en cos ().",
+      "returns": ""
     },
-    "_TAU": {
-      "description": "TAU es un alias de TWO_PI, una constante matemática de valor 6.28318530717958647693. Es el doble de la razón entre la circunferencia de un círculo y su diámetro. Es útil en combinación con las funciones trigonométricas sin() y cos().",
-      "returns": "el objeto p5"
+    "TAU": {
+      "description": "TAU is een andere benaming voor TWO_PI, het is een wiskundige constante met de waarde 6.28318530717958647693. De verhouding (2x circel omtrek)/(diameter) komt overeen met TWO_PI. De constante wordt veel gebruikt in combinatie met de trigonometrische functies sin () en cos ().",
+      "returns": ""
     },
-    "_TWO_PI": {
-      "description": "TWO_PI es una constante matemática de valor 6.28318530717958647693. Es el doble de la razón entre la circunferencia de un círculo y su diámetro. Es útil en combinación con las funciones trigonométricas sin() y cos().",
-      "returns": "el objeto p5"
+    "TWO_PI": {
+      "description": "TWO_PI is een wiskundige constante met de waarde 6.28318530717958647693. De verhouding (2x circel omtrek)/(diameter) komt overeen met TWO_PI. De constante wordt veel gebruikt in combinatie met de trigonometrische functies sin () en cos ().",
+      "returns": ""
     },
     "_preload": {
       "description": "La función preload() es ejecutada antes de setup(), es usada para manejar la carga asíncrona de archivos externos. Si se define una función preload(), setup() esperará hasta que las llamadas a funciones load hayan terminado. Solo se deben incluir instrucciones de carga dentro de preload() (loadImage, loadJSON, loadFont, loadStrings, etc).",
@@ -564,24 +567,24 @@
       "params": ["Cualquiera: cualquier combinación de Nummer, string, objeto, boolean o arreglo a imprimir"],
       "returns": "el objeto p5"
     },
-    "_frameCount": {
-      "description": "La variable de sistema frameCount contiene el Nummer de cuadros (frames) que se han mostrado desde que el programa empezó a ejecutarse. Dentro de setup() el valor es 0, después de la primera iteración de draw() es 1, etc.",
-      "returns": "el objeto p5"
+    "frameCount": {
+      "description": "De systeemvariabele frameCount bevat het aantal frames dat is weergegeven sinds de start van het programma. Binnen setup() is de waarde 0, na de eerste iteratie van draw functie is deze 1, etc.",
+      "returns": ""
     },
-    "_focused": {
-      "description": "Confirma si la ventana de un programa de p5.js está en foco, lo que significa que el bosquejo aceptará entradas desde el ratón o teclado. Esta variable es verdadera (true) si la ventana está en foco y falsa (false) si no.",
-      "returns": "el objeto p5"
+    "focused": {
+      "description": "De systeemvariabele focused geeft aan of het venster waarin een p5.js-programma draait '''gefocust''' is, wat betekent dat het p5.js-programma muis- of toetsenbordinvoer accepteert. Deze variabele is '''true''' als het venster is gefocust in alle andere gevallen '''false'''.",
+      "returns": ""
     },
     "_cursor": {
       "description" : "Define el cursor como un símbolo predeterminado o una imagen, o hace el cursor visible si es que estaba escondido. Si estás tratando de asignar una imagen al cursor, el tamaño recomendado es 16x16 o 32x32 pixeles. No es posible cargar una imagen al cursor si estás exportando tu programa a la Web, y no todos los modos funcionan con todos los navegadores. Los valores de los parámetros x e y deben ser menores a la dimensión de la imagen.",
       "params": ["Nummer|Constante: puede ser ARROW, CROSS, HAND, MOVE, TEXT, o WAIT, o la dirección de una imagen",
-      "Nummer: el punto activo horizontal del cursor",
-      "Nummer: el punto activo vertical del cursor"],
+      "Getal: el punto activo horizontal del cursor",
+      "Getal: el punto activo vertical del cursor"],
       "returns": "el objeto p5"
     },
     "_frameRate": {
       "description": "Especifica el Nummer de cuadros mostrados por segundo. Por ejemplo, la llamada a la función frameRate(30), tratará de refrescar 30 veces por segundo. Si el procesador no es lo suficientemente rápido para mantener la tasa especificada, la tasa de cuadros por segundo no será lograda. Definir la tasa de cuadros por segundo dentro de setup() es lo recomendable. La tasa por defecto es de 60 veces por segundo. Esto es lo mismo que setFrameRate(val). Llamar a la función frameRate() sin argumentos retorna la tasa actual. Esto es lo mismo que getFrameRate(). Llamar a la función frameRate() con arugmentos que no son de tipo Nummer o no son positivos también retornarán la tasa actual.",
-      "params": ["Nummer: Nummer de cuadros a ser mostrados cada segundo."],
+      "params": ["Getal: Nummer de cuadros a ser mostrados cada segundo."],
       "returns": "la tasa de cuadros por segundo (frameRate) actual"
     },
     "_noCursor": {
@@ -624,12 +627,12 @@
     },
     "_pixelDensity": {
       "description": "Define el escalamiento de pixeles para monitores de alta densidad de pixeles. Por defecto, la densidad de pixeles es definida para calzar con la densidad del monitor, ejecuta pixelDensity() para que no sea así. Llamar a pixelDensity() sin argumentos retorna la densidad de pixeles actual del bosquejo.",
-      "params": ["Nummer: si es que el bosquejo debe ser escalado y cuánto."],
-      "returns": "Nummer: densidad de pixeles actual del bosquejo"
+      "params": ["Getal: si es que el bosquejo debe ser escalado y cuánto."],
+      "returns": "Getal: densidad de pixeles actual del bosquejo"
     },
     "_displayDensity": {
       "description": "Retorna la densidad de pixeles del monitor actual en que el bosquejo está corriendo.",
-      "returns": "Nummer: la densidad de pixeles actual del monitor"
+      "returns": "Getal: la densidad de pixeles actual del monitor"
     },
     "_getURL": {
       "description": "Retorna la URL actual.",
@@ -645,8 +648,8 @@
     },
     "_createCanvas": {
       "description": "Crea un elemento canvas en el documento, y define sus dimensiones medidas en pixeles. Este método debe ser llamado solo una vez al comienzo de la función setup(). Llamar a la función createCanvas() más de una vez en un bosquejo puede resultar en comportamientos impredecibles. Si quieres más de un lienzo donde dibujar, debes usar la función createGraphics() (escondido por defecto, pero puede ser mostrado), Las variables de sistema width (ancho) y height (altura) son definidas por los parámetros pasados a la función. Si createCanvas() no es usado, la ventana tendrá un tamaño por defecto de 100 x 100 pixeles. Para más maneras de posicionar el lienzo, ver la sección de posición del lienzo.",
-      "params": ["Nummer: ancho del lienzo",
-      "Nummer: altura del lienzo",
+      "params": ["Getal: ancho del lienzo",
+      "Getal: altura del lienzo",
       "Constante: P2D o WEBGL"],
       "returns": "Objeto: lienzo generado"
     },
@@ -660,8 +663,8 @@
     },
     "_createGraphics": {
       "description": "Crea y retorna un nuevo objeto p5.Renderer. Usa esta clase si necesitas dibujar fuera de pantalla en un buffer gráfico. Los dos parámetros definen el ancho y la altura en pixeles.",
-      "params": ["Nummer: ancho del buffer gráfico fuera de pantalla",
-      "Nummer: altura del buffer gráfico fuera de pantalla",
+      "params": ["Getal: ancho del buffer gráfico fuera de pantalla",
+      "Getal: altura del buffer gráfico fuera de pantalla",
       "Constante: P2D o WEBGL, si no se define es P2D por defecto"],
       "returns": "buffer gráfico fuera de pantalla"
     },
@@ -672,12 +675,12 @@
     },
     "_applyMatrix": {
       "description": "Multiplica la matriz actual por la especificada según los parámetros. Esto es muy lento porque tratará de calcular el inverso de la transformada, así que evítalo cuando sea posible",
-      "params": ["Nummer: Nummers que definen la matriz 3x2 a multiplicar",
-      "Nummer: Nummers que definen la matriz 3x2 a multiplicar",
-      "Nummer: Nummers que definen la matriz 3x2 a multiplicar",
-      "Nummer: Nummers que definen la matriz 3x2 a multiplicar",
-      "Nummer: Nummers que definen la matriz 3x2 a multiplicar",
-      "Nummer: Nummers que definen la matriz 3x2 a multiplicar"],
+      "params": ["Getal: Nummers que definen la matriz 3x2 a multiplicar",
+      "Getal: Nummers que definen la matriz 3x2 a multiplicar",
+      "Getal: Nummers que definen la matriz 3x2 a multiplicar",
+      "Getal: Nummers que definen la matriz 3x2 a multiplicar",
+      "Getal: Nummers que definen la matriz 3x2 a multiplicar",
+      "Getal: Nummers que definen la matriz 3x2 a multiplicar"],
       "returns": "el objeto p5"
     },
     "_resetMatrix": {
@@ -687,48 +690,48 @@
     "_rotate": {
       "description": "Rota una figura según el monto especificado por el parámetro ángulo. Esta función toma en cuenta el modo de ángulo definido por angleMode(), así que los ángulos pueden ser ingresados en radianes o grados. Los objetos son siempre rotados según su posición relativa al origen y los Nummers positivos rotan en la dirección de las manecillas del reloj. Las transformaciones se aplican a todo lo que ocurre de forma posterior y las subsecuentes llamadas a la función acumulan el efecto. Por ejemplo, llamar a la función rotate(HALF_PI) y luego rotate(HALF_PI) equivale a una llamada a rotate(PI). Todas las transformaciones son anuladas cuando la función draw() comienza nuevamente. Técnicamente, rotate() multiplica la matriz de transformación actual por una matriz de rotación. Esta función puede ser controlada además con las funciones push() y pop().",
       "params": ["Ángulo: el ángulo de rotación, especificado en radianes o grados, dependiendo de angleMode()",
-      "Nummer: ángulo en radianes",
+      "Getal: ángulo en radianes",
       "p5.Vector|Arreglo: eje sobre el que se rota"],
       "returns": "el objeto p5"
     },
     "_rotateX": {
       "description": "Rota en torno al eje X",
-      "params": ["Nummer: ángulo en radianes"],
+      "params": ["Getal: ángulo en radianes"],
       "returns": "el objeto p5"
     },
     "_rotateY": {
       "description": "Rota en torno al eje Y",
-      "params": ["Nummer: ángulo en radianes"],
+      "params": ["Getal: ángulo en radianes"],
       "returns": "el objeto p5"
     },
     "_rotateZ": {
       "description": "Rota en torno al eje Z,. Sólo disponible en el modo WEBGL.",
-      "params": ["Nummer: ángulo en radianes"],
+      "params": ["Getal: ángulo en radianes"],
       "returns": "el objeto p5"
     },
     "_scale": {
       "description": "Aumenta o decrementa el tamaño de una figura por medio de expandir o contraer sus vértices. Los objetos siempre escalan desde su origen relativo al sistema de coordenadas. Los valores de escalamiento son porcentajes decimales. Por ejemplo, la llamada a la función scale(2.0) aumenta la dimensión de una figura en un 200%. Las transformaciones se aplican a todo lo que ocurre después y llamadas subsecuentes a la función multiplican el efecto. Por ejemplo, llamar a scale(2.0) y luego a scale(1.5) equivale a llamar a scale(3.0). Si la función scale() es llamad dentro de draw(), la transformación es anulada cuando el bucle empieza nuevamente. El uso de esta función con el parámetro z está solo disponible en el modo WEBGL. Esta función puede también ser controlada con las funciones push() y pop().",
       "params": ["Nummer | p5.Vector| Arreglo: porcentaje a escalar del objeto, o porcentaje a esacalar del objeto en el eje x si se dan múltiples argumentos",
-      "Nummer: porcentaje a escalar el objeto en el eje y",
-      "Nummer: porcentaje a escalar el objeto en el eje z (sólo en modo WEBGL)"],
+      "Getal: porcentaje a escalar el objeto en el eje y",
+      "Getal: porcentaje a escalar el objeto en el eje z (sólo en modo WEBGL)"],
       "returns": "el objeto p5"
     },
     "_shearX": {
       "description": "Corta la figura en torno al eje x según el monto especificado por el parámetro ángulo. Los ángulos deben ser especificados según el modo actual de ángulo angleMode(). Los objetos son siempre cortados según su posición relativa al origen y los Nummers positivos cortan los objetos en la dirección de las manecillas del reloj. Las transformaciones aplican a todo lo que ocurre después y llamadas posteriores a la misma función acumulan el efecto. Por ejemplo, llamar a shearX(PI/2) y luego a shearX(PI/2) equivale a llamar a shearX(PI). Si shearX() es llamado dentro de draw(), la transformación es anulada cuando el bucle empieza nuevamente. Técnicamente, shearX() multiplica la matriz de transformación actual por una matriz de rotación. La función puede ser controlada con las funciones push() y pop().",
-      "params": ["Nummer: ángulo de corte especificado en radianes o grados, dependiendo del modo de ángulo actual angleMode()"],
+      "params": ["Getal: ángulo de corte especificado en radianes o grados, dependiendo del modo de ángulo actual angleMode()"],
       "returns": "el objeto p5"
     },
     "_shearY": {
 
         "description": "Corta la figura en torno al eje y según el monto especificado por el parámetro ángulo. Los ángulos deben ser especificados según el modo actual de ángulo angleMode(). Los objetos son siempre cortados según su posición relativa al origen y los Nummers positivos cortan los objetos en la dirección de las manecillas del reloj. Las transformaciones aplican a todo lo que ocurre después y llamadas posteriores a la misma función acumulan el efecto. Por ejemplo, llamar a shearY(PI/2) y luego a shearY(PI/2) equivale a llamar a shearY(PI). Si shearY() es llamado dentro de draw(), la transformación es anulada cuando el bucle empieza nuevamente. Técnicamente, shearY() multiplica la matriz de transformación actual por una matriz de rotación. La función puede ser controlada con las funciones push() y pop().",
-        "params": ["Nummer: ángulo de corte especificado en radianes o grados, dependiendo del modo de ángulo actual angleMode()"],
+        "params": ["Getal: ángulo de corte especificado en radianes o grados, dependiendo del modo de ángulo actual angleMode()"],
         "returns": "el objeto p5"
     },
     "_translate": {
       "description": "Especifica una cantidad a desplazar los objetos dentro de la ventana mostrada. El parámetro x especifica la traslación de izquierda a derecha, el parámetro y especifica la traslación de arriba a abajo. Las transformaciones son acumulativas y aplican a todo lo que ocurre después y llamadas posteriores a la misma función acumulan el efecto. Por ejemplo, llamar a translate(50, 0) y luego a translate(20, 0) equivale a llamar a translate(70, 0). Si translate() es llamado dentro de draw(), la transformación es anulada cada vez que el bucle empieza nuevamente. Esta función peude ser controlada con las funciones push() y pop().",
-      "params": ["Nummer: traslación izquierda-derecha",
-      "Nummer: traslación arriba-abajo",
-      "Nummer: traslación adelante-atrás (solo en modo WEBGL)"],
+      "params": ["Getal: traslación izquierda-derecha",
+      "Getal: traslación arriba-abajo",
+      "Getal: traslación adelante-atrás (solo en modo WEBGL)"],
       "returns": "el objeto p5"
     },
     "_deviceOrientation": {
@@ -785,12 +788,12 @@
     },
     "_setMoveThreshold": {
       "description": "La función setMoveThreshold() es usada para definir el umbral para detectar movimiento de la función deviceMoved(). El valor umbral por defecto es 0.5",
-      "params": ["Nummer: el valor umbral"],
+      "params": ["Getal: el valor umbral"],
       "returns": "el objeto p5"
     },
     "_setShakeThreshold": {
       "description": "La función setShakeThreshold() es usada para definir el umbral para detectar agitamiento de la función deviceShaken(). El valor umbral por defecto es 30.",
-      "params": ["Nummer: el valor umbral"],
+      "params": ["Getal: el valor umbral"],
       "returns": "el objeto p5"
     },
     "_deviceMoved": {
@@ -827,12 +830,12 @@
     },
     "_keyTyped": {
       "description": "la función keyTyped es llamada cava vez que una tecla es presionada, excepto cuando son presionadas la steclas de acción como Ctrl, Shift y Alt, que son ignoradas. La tecla presionada más reciente será almacenada en la variable key. Por la forma en que los sistemas operativos manejan la repetición de teclas, mantener presionada una tecla puede causar múltiples llamadas a keyTyped() (y también keyReleased()). La tasa de repetición es definida por el sistema operativo y según cómo cada computador está configurado. Los navegadores tienen distintos comportamientos por defecto asociados a distintos eventos gatillados por teclas. Para prevenir cualquier comportamiento por defecto para este evento, añade return false al final de este método.",
-      "params": ["Nummer: el valor umbral"],
+      "params": ["Getal: el valor umbral"],
       "returns": "el objeto p5"
     },
     "_keyIsDown": {
       "description": "La función keyIsDown() comprueba si la tecla está presionada. Puede ser usada si tienes un objeto que se mueve, y quieres que varias teclas sean capaces de afectar este comportamiento de manera simultánea, como cuando mueves una imagen de forma diagonal. Puedes ingresar cualquier Nummer representando el código de tecla keyCode de la tecla, o usar cualquier de los nombres de la variable keyCode.",
-      "params": ["Nummer: la tecla a buscar"],
+      "params": ["Getal: la tecla a buscar"],
       "returns": "el objeto p5"
     },
     "_mouseX": {
@@ -968,8 +971,8 @@
       "description": "Captura una secuencia de cuadros que pueden ser usados para crear una película. Acepta una función callback. Por ejemplo, puedes querer mandar los cuadros a un servidor donde pueden ser almacenados o convertidos en una película. Si no se provee una función callback, el navegador abrirá varios diálogos tratando de descargar todas las imágenes que han sido creadas. Con una función callback provista, los datos de imagen no son grabados por defecto, sino que son pasados como argumento a la función callback como un arreglo de objetos, con el tamaño del arreglo siendo igual al Nummer total de cuadros.",
       "params": ["String: ",
       "String: jpg o png",
-      "Nummer: duración en segundos para grabar los cuadros",
-      "Nummer: tasa de cuadros por segundo a grabar",
+      "Getal: duración en segundos para grabar los cuadros",
+      "Getal: tasa de cuadros por segundo a grabar",
       "Función: una función callback que será ejecutada para manejar los datos de imagen. Esta función deberá aceptar un arreglo como argumento. El arreglo contendrá el Nummer especificado de cuadros como objetos. Cada objeto tiene tres propiedades: datos de imagen imageData, nombre del archivo y extensión"],
       "returns": "el objeto p5"
     },
@@ -983,18 +986,18 @@
     "_image": {
       "description": "Dibuja una imagen en el lienzo principal del bosquejo p5.js.",
       "params": ["p5.Image: la imagen a mostrar",
-      "Nummer: la coordenada x donde se ubicará la esquina superior de la imagen",
-      "Nummer: la coordenada y donde se ubicará la esquina superior de la imagen",
-      "Nummer: ancho de la imagen a dibujar",
-      "Nummer: altura de la imagen a dibujar",
-      "Nummer: la coordenada x en el lienzo de destino donde se ubicará la esquina superior izquierda de la imagen",
-      "Nummer: la coordenada y en el lienzo de destino donde se ubicará la esquina superior izquierda de la imagen",
-      "Nummer: ancho de la imagen a dibujar en el lienzo de destino",
-      "Nummer: altura de la imagen a dibujar en el lienzo de destino",
-      "Nummer: la coordenada x de la esquina superior izquierda del subrectángulo de la imagen original a dibujar en el lienzo de destino",
-      "Nummer: la coordenada y de la esquina superior izquierda del subrectángulo de la imagen original a dibujar en el lienzo de destino",
-      "Nummer: el ancho del subrectángulo de la imagen original a dibujar en el lienzo de destino",
-      "Nummer: la altura del subrectángulo de la imagen original a dibujar en el lienzo de destino"],
+      "Getal: la coordenada x donde se ubicará la esquina superior de la imagen",
+      "Getal: la coordenada y donde se ubicará la esquina superior de la imagen",
+      "Getal: ancho de la imagen a dibujar",
+      "Getal: altura de la imagen a dibujar",
+      "Getal: la coordenada x en el lienzo de destino donde se ubicará la esquina superior izquierda de la imagen",
+      "Getal: la coordenada y en el lienzo de destino donde se ubicará la esquina superior izquierda de la imagen",
+      "Getal: ancho de la imagen a dibujar en el lienzo de destino",
+      "Getal: altura de la imagen a dibujar en el lienzo de destino",
+      "Getal: la coordenada x de la esquina superior izquierda del subrectángulo de la imagen original a dibujar en el lienzo de destino",
+      "Getal: la coordenada y de la esquina superior izquierda del subrectángulo de la imagen original a dibujar en el lienzo de destino",
+      "Getal: el ancho del subrectángulo de la imagen original a dibujar en el lienzo de destino",
+      "Getal: la altura del subrectángulo de la imagen original a dibujar en el lienzo de destino"],
       "returns": "el objeto p5"
     },
     "_tint": {
@@ -1048,15 +1051,15 @@
     "_filter": {
         "description": "Aplica un filtro al lienzo. Las opciones posibles son: THRESHOLD, que convierte la imagen a pixeles blancos y negros dependiendo de si están arriba o abajo del umbral definido por el parámetro. El parámetro debe estar entre 0.0 (negro) y 1.0 (blanco). Si no se especifica ningún valor, el valor por defecto es 0.5. GRAY, convierte cualquier color en la imagen a un equivalente en la escala de grises, no tiene parámetros. OPAQUE, hace que el canal alpha sea totalmente opaco, no tiene parámetros. INVERT, hace que cada pixel tenga su valor inverso, no tiene parámetros. POSTERIZE, limita cada canal de la imagen a un Nummer de colores especificado como parámetro. El parámetro puede definir entre 2 y 255 valores, pero los resultados más notorios se dan con valores bajos. BLUR, hace que la imagen sea borrosa con un proceso Gaussiano, siendo el parámetro el nivel de cuán borroso es el resultado, si no se usa ningún parámetro, el parámetro por defecto es 1, a mayores valores es más borroso el resultado. ERODE, reduce las áreas claras, no tiene parámetros. DILATE, aumenta las áreas claras, no tiene parámetros.",
         "params": ["Constante: ",
-        "Nummer: un parámetro opcional único a cada filtro, ver más arriba"],
+        "Getal: un parámetro opcional único a cada filtro, ver más arriba"],
         "returns": "el objeto p5"
     },
     "_get": {
       "description": "Retorna un arreglo de valores RGBA por cada pixel o toma una sección de una imagen. Si no especifican parámetros, se retorna la imagen entera. Usa los parámetros x e y para obtener el valor de un pixel. Toma una sección de la ventana mostrada si especificas los parámetros adicionales w y h. Cuando se obtiene una imagen, los parámetros x e y definen las coordenadas de la esquina superior izquierda de la imagen, sin importar el actual mode imagen definido por imageMode(). Si el pixel solicitado está fuera de la imagen, se retorna el valor [0, 0, 0, 255]. Para obtener los Nummers escalados según los rangoes de color actuales y tomar en cuenta el modo de color según colorMode(), usa getColor() en vez de get(). Tomar el valor de un pixel con get(x, y) es fácil, pero no tan rápido como tomar los datos directamente desde pixels[]. La instrucción equivalente a get(x, y) usando pixels[] con densidad de pixeles d es  var off = (y width + x) d * 4; [pixels[off], pixels[off+1], pixels[off+2], pixels[off+3]]. Ver la referencia de pixels[] para mayor información.",
-      "params": ["Nummer: coordenada x del pixel",
-      "Nummer: coordenada y del pixel",
-      "Nummer: ancho",
-      "Nummer: altura"],
+      "params": ["Getal: coordenada x del pixel",
+      "Getal: coordenada y del pixel",
+      "Getal: ancho",
+      "Getal: altura"],
       "returns": "Arreglo|p5.Image: valores de pixel en la posición (x, y) en formato arreglo RGBAs o p5.Image"
     },
     "_loadPixels": {
@@ -1065,9 +1068,9 @@
     },
     "_set": {
       "description": "Cambia el color de cualquier pixel, o pone una imagen directamente en la ventana. Los parámetros x e y especifican el pixel a cambiar y c especifica el valor del color. Puede ser un objeto p5.Color o un arreglo de pixeles RGBA. También puede ser un valor único en escala de grises. Cuando se define una imagen, los parámetros x e y definen las coordenadas de la esquina superior izquierda de la imagen, sin importar el modo actual de imagen según imageMode(). Después de usar set(), debes llamar a updatePixels()' para que tus cambios aparezcan. Esta función debería ser llamada una vez que todos los pixeles han sido definidos. Definir el color de un solo pixel con set(x, y) es fácil, pero es tan rápido como poner los datos directamente en el arreglo pixels[]. Definir los valores de pixels[] directamente puede ser complicado cuando se trabaja con un monitor retina, pero tendrá un mejor desempeño cuando muchos pixeles necesiten ser definidos directamente en cada iteración. Ver la referencia de pixels[] para mayor información.",
-      "params": ["Nummer: coordenada x del pixel",
-      "Nummer: coordenada x del pixel",
-      "Nummer: coordenada y del pixel",
+      "params": ["Getal: coordenada x del pixel",
+      "Getal: coordenada x del pixel",
+      "Getal: coordenada y del pixel",
       "Nummer|Arreglo|Objeto: inserta un valor en escala de grises | un arreglo de pixeles | un objeto p5.Color | un objeto p5.Image a copiar"],
       "returns": "el objeto p5"
     },
@@ -1075,10 +1078,10 @@
       "example": "",
 
       "description": "Actualiza la ventana mostrada con los datos del arreglo pixels[]. Se usa en conjunto con loadPixels(). Si solo estás leyendo pixeles desde el arreglo, no hay necesidad de llamar a updatePixels() - actualizar es solo necesario para aplicar cambios. updatePixels() debe ser llamada cada vez que el arreglo de pixeles es manipulado o si se llama a la función set().",
-      "params": ["Nummer: coordenada x de la esquina superior izquierda de la región a actualizar",
-      "Nummer: coordenada y de la esquina superior izquierda de la región a actualizar",
-      "Nummer: ancho de la región a actualizar",
-      "Nummer: altura de la región a actualizar"],
+      "params": ["Getal: coordenada x de la esquina superior izquierda de la región a actualizar",
+      "Getal: coordenada y de la esquina superior izquierda de la región a actualizar",
+      "Getal: ancho de la región a actualizar",
+      "Getal: altura de la región a actualizar"],
       "returns": "el objeto p5"
     },
     "_loadFont": {
@@ -1183,31 +1186,31 @@
     },
     "_day": {
       "description": "p5.js se comunica con el reloj de tu computador. La función day() retorna el día actual como un valor entre 1 y 31.",
-      "returns": "Nummer: el día actual"
+      "returns": "Getal: el día actual"
     },
     "_hour": {
       "description": "p5.js se comunica con el reloj de tu computador. La función hour() retorna la hora actual como un valor entre 0 y 23.",
-      "returns": "Nummer: la hora actual"
+      "returns": "Getal: la hora actual"
     },
     "_minute": {
       "description": "p5.js se comunica con el reloj de tu computador. La función minute() retorna el minuto actual como un valor entre 0 y 59.",
-      "returns": "Nummer: el minuto actual"
+      "returns": "Getal: el minuto actual"
     },
     "_millis": {
       "description": "Retorna el Nummer de milisegundos (milésimas de segundo) desde que el programa empezó a correr. La información es usada a menudo para temporizar eventos y animar secuencias",
-      "returns": "Nummer: el Nummer de milisegundos desde que empezó el programa"
+      "returns": "Getal: el Nummer de milisegundos desde que empezó el programa"
     },
     "_month": {
       "description": "p5.js se comunica con el reloj de tu computador. La función month() retorna el mes actual como un valor entre 1 y 12.",
-      "returns": "Nummer: el mes actual"
+      "returns": "Getal: el mes actual"
     },
     "_second": {
       "description": "p5.js se comunica con el reloj de tu computador. La función second() retorna el mes actual como un valor entre 0 y 59.",
-      "returns": "Nummer: el segundo actual"
+      "returns": "Getal: el segundo actual"
     },
     "_year": {
       "description": "p5.js se comunica con el reloj de tu computador. La función year() retorna el año actual como un entero (2014, 2015, 2015, etc).",
-      "returns": "Nummer: el año actual"
+      "returns": "Getal: el año actual"
     },
     "_p5.XML": {
       "description": "XML es una representación de un objeto XML, capaz de procesar código XML. Usa loadXML() para cargar archivos externos XML y crear objetos XML",
@@ -1216,182 +1219,182 @@
     },
     "_createVector": {
       "description": "Crea un nuevo objeto p5.Vector (el tipo de datos para almacenar vectores). Esto provee un vector de dos o tres dimensiones, específicamente un vector euclideano (también conocido como geométrico). Un vector es una entidad que tiene tanto magnitud como dirección.",
-      "params": ["Nummer: componente x del vector",
-      "Nummer: componente y del vector",
-      "Nummer: componente z del vector"],
+      "params": ["Getal: componente x del vector",
+      "Getal: componente y del vector",
+      "Getal: componente z del vector"],
       "returns": "el objeto p5"
     },
     "_p5.Vector": {
       "description": "Una clase para describir un vector de dos o tres dimensiones, específicamente un vector euclideano (también conocido como geométrico). Un vector es una entidad que tiene tanto magnitud como dirección. El tipo de datos, sin embargo, graba los componentes del vector (x, y para 2D y x,y,z para 3D). La magnitud y la dirección pueden ser calculados con los métodos mag() y heading(). En muchos de los ejemplos de p5.js, verás que p5.Vector es usado para describir una posición, velocidad o aceleración. Por ejemplo, si consideras un rectángulo moviéndose a lo largo de la pantalla, en cada instante tiene una posición (un vector que apunta desde el origen hasta su ubicación), una velocidad(la tasa a la que la posición del objeto cambia por unidad de tiempo, expresada como vector), y aceleración (la tasa a la que la velocidad del objeto cambia por unidad de tiempo, expresada como vector). Como los vectores representan grupos de valores, no podemos simplemente usar las operaciones tradicionales de adición, multiplicación, etc. En vez de eso, necesitaremos hacer matemática de vectores, lo que es simplificado con los métodos dentro de la clase p5.Vector.",
-      "params": ["Nummer: componente x del vector",
-      "Nummer: componente y del vector",
-      "Nummer: componente z del vector"],
+      "params": ["Getal: componente x del vector",
+      "Getal: componente y del vector",
+      "Getal: componente z del vector"],
       "returns": "el objeto p5"
     },
     "_abs": {
       "description": "Calcula el valor absoluto (magnitud) de un Nummer. Usa Math.abs(). El valor absoluto de un Nummer es siempre positivo.",
-      "params": ["Nummer: Nummer a computar"],
-      "returns": "Nummer: valor absoluto del Nummer dado"
+      "params": ["Getal: Nummer a computar"],
+      "returns": "Getal: valor absoluto del Nummer dado"
     },
     "_ceil": {
       "description": "Calcula el entero más cercano que es mayor o igual que el valor del paráemtro. Usa Math.ceil(). Por ejemplo, ceil(9.03) retorna el valor 10.",
-      "params": ["Nummer: Nummer a redondear"],
-      "returns": "Nummer: Nummer redondeado hacia arriba"
+      "params": ["Getal: Nummer a redondear"],
+      "returns": "Getal: Nummer redondeado hacia arriba"
     },
     "_constrain": {
       "description": "Restringe un valor a estar entre un valor mínimo y uno máximo.",
-      "params": ["Nummer: Nummer a restringir",
-      "Nummer: límite mínimo",
-      "Nummer: límite máximo"],
-      "returns": "Nummer: Nummer restringido"
+      "params": ["Getal: Nummer a restringir",
+      "Getal: límite mínimo",
+      "Getal: límite máximo"],
+      "returns": "Getal: Nummer restringido"
     },
     "_dist": {
       "description": "Calcula la distancia entre dos puntos",
-      "params": ["Nummer: la coordenada x del primer punto",
-      "Nummer: la coordenada y del primer punto",
-      "Nummer: la coordenada z del primer punto",
-      "Nummer: la coordenada x del segundo punto",
-      "Nummer: la coordenada y del segundo punto",
-      "Nummer: la coordenada z del segundo punto"],
-      "returns": "Nummer: distancia entre los dos puntos"
+      "params": ["Getal: la coordenada x del primer punto",
+      "Getal: la coordenada y del primer punto",
+      "Getal: la coordenada z del primer punto",
+      "Getal: la coordenada x del segundo punto",
+      "Getal: la coordenada y del segundo punto",
+      "Getal: la coordenada z del segundo punto"],
+      "returns": "Getal: distancia entre los dos puntos"
     },
     "_exp": {
       "description": "Retorna el Nummer de Euler (2.71828...) elevado al parámetro n. Usa Math.exp().",
-      "params": ["Nummer: exponente a elevar"],
+      "params": ["Getal: exponente a elevar"],
       "returns": "e^n"
     },
     "_floor": {
       "description": "Calcula el valor entero más cercano que es menor o igual al parámetro. Usa Math.floor().",
-      "params": ["Nummer: Nummer a ser redondeado hacia abajo"],
-      "returns": "Nummer: Nummer redondeado hacia abajo"
+      "params": ["Getal: Nummer a ser redondeado hacia abajo"],
+      "returns": "Getal: Nummer redondeado hacia abajo"
     },
     "_lerp": {
       "description": "Calcula un Nummer entre dos Nummers a un incremento específico. El parámetro amt es la cantidad a interpolar entre los dos valores donde 0.0 es igual al primer punto, 0.1 está muy cerca del primer punto, 0.5 está a medio camino entre ambos Nummers, etc. La función lerp es conveniente para crear movimiento a lo largo de un camino recto y para dibujar líneas punteadas.",
-      "params": ["Nummer: primer valor",
-      "Nummer: segundo valor",
-      "Nummer: Nummer entre 0.0 y 1.0"],
-      "returns": "Nummer: valor interpolado"
+      "params": ["Getal: primer valor",
+      "Getal: segundo valor",
+      "Getal: Nummer entre 0.0 y 1.0"],
+      "returns": "Getal: valor interpolado"
     },
     "_log": {
       "description": "Calcula el logaritmo natural (logaritmo con base e) de un Nummer. Esta función espera que el parámetro n sea de un valor más grande que 0.0. Usa Math.log().",
-      "params": ["Nummer: Nummer más grande que 0"],
-      "returns": "Nummer: logaritmo naturla de n"
+      "params": ["Getal: Nummer más grande que 0"],
+      "returns": "Getal: logaritmo naturla de n"
     },
     "_mag": {
       "description": "Calcula la magnitud (o tamaño) de un vector. Un vector es una dirección en el espacio comúnmente usada en gráfica computacional y álgebra lineal. Como no tiene posición de inicio, la magnitud del vector puede ser pensada como la distancia entre la coordenada 0,0 a su valor x,y. Por lo tanto, mag() es un atajo a escribir dist(0, 0, x, y).",
-      "params": ["Nummer: primer valor",
-      "Nummer: segundo valor"],
-      "returns": "Nummer: magnitud del vector entre (0, 0) y (a, b)"
+      "params": ["Getal: primer valor",
+      "Getal: segundo valor"],
+      "returns": "Getal: magnitud del vector entre (0, 0) y (a, b)"
     },
     "_map": {
       "description": "Escala un nombre de un rango a otro rango. En el primer ejemplo anterior, el Nummer 25 es convertido de un valor en el rango entre 0 y 100 a un valor cuyo rango está entre el borde izquierdo de la ventana (0) y el borde derecho (ancho).",
-      "params": ["Nummer: el valor a ser convertido",
-      "Nummer: límite inferior del rango actual",
-      "Nummer: límite superior del rango actual",
-      "Nummer: límite inferior del rango deseado",
-      "Nummer: límite superior del rango deseado"],
-      "returns": "Nummer: Nummer escalado"
+      "params": ["Getal: el valor a ser convertido",
+      "Getal: límite inferior del rango actual",
+      "Getal: límite superior del rango actual",
+      "Getal: límite inferior del rango deseado",
+      "Getal: límite superior del rango deseado"],
+      "returns": "Getal: Nummer escalado"
     },
     "_max": {
       "description": "Determina el valor más grande en una secuencia de Nummers, y luego retorna ese valor. max() acepta cualquier Nummer de parámetros tipo Nummer, o un arreglo de cualquier largo.",
       "params": ["Nummer|Arreglo: Nummers a comparar"],
-      "returns": "Nummer: Nummer máximo"
+      "returns": "Getal: Nummer máximo"
     },
     "_min": {
       "description": "Determina el valor más pequeño en una secuencia de Nummers, y luego retorna ese valor. max() acepta cualquier Nummer de parámetros tipo Nummer, o un arreglo de cualquier largo.",
       "params": ["Nummer|Arreglo: Nummers a comparar"],
-    "returns": "Nummer: Nummer mínimo"
+    "returns": "Getal: Nummer mínimo"
     },
     "_norm": {
       "description": "Normaliza un Nummer de un rango a otro rango entre 0 y 1. Es idéntico a map(value, low, high, 0, 1). Los Nummers fuera del rango no son saturados a 0 o 1, porque los Nummers fuera de rango son muchas veces intencionales y útiles (ver el segundo ejemplo más arriba)",
-      "params": ["Nummer: valor entrante a ser normalizado",
-      "Nummer: límite inferior del rango actual",
-      "Nummer: límite superior del rango actual"],
-      "returns": "Nummer: Nummer normalizado"
+      "params": ["Getal: valor entrante a ser normalizado",
+      "Getal: límite inferior del rango actual",
+      "Getal: límite superior del rango actual"],
+      "returns": "Getal: Nummer normalizado"
     },
     "_pow": {
       "description": "Facilita las expresiones exponenciales. La función pow() es una manera eficiente de multiplicar Nummers po sí mismos (o sus recíprocos) en grandes cantidades. Por ejemplo, pow(3, 5) es equivalente a la expresión 3*3*3*3*3 y pow (3, -5) es equivalente a 1/3*3*3*3*3. Usa Math.pow().",
-      "params": ["Nummer: base de la expresión exponencial",
-      "Nummer: potencia a la que se eleva la base"],
+      "params": ["Getal: base de la expresión exponencial",
+      "Getal: potencia a la que se eleva la base"],
       "returns": "n^e"
     },
     "_round": {
       "description": "Calcula el entero más cercano al parámetro n. Por ejemplo, round(133.8) retorna el valor 134. Usa la función Math.round().",
-      "params": ["Nummer: Nummer a redondear"],
-      "returns": "Nummer: Nummer redondeado"
+      "params": ["Getal: Nummer a redondear"],
+      "returns": "Getal: Nummer redondeado"
     },
     "_sq": {
       "description": "Eleva al cuadrado un Nummer (lo multiplica por sí mismo), El resultado es siempre un Nummer positivo, porque multiplicar dos Nummers negativos siempre resulta en un Nummer positivo.",
-      "params": ["Nummer: Nummer a elevar al cuadrado"],
-      "returns": "Nummer: Nummer elevado al cuadrado"
+      "params": ["Getal: Nummer a elevar al cuadrado"],
+      "returns": "Getal: Nummer elevado al cuadrado"
     },
-    "_sqrt": {
-      "description": "Calcula la raíz cuadrada de un Nummer. La raíz cuadrada de un Nummer es siempre positiva, aunque puede haber una raíz cuadrada válida que sea negativa. La raíz cuadrada s de un Nummer a es tal que s*s = a. Es lo opuesto a elevar al cuadrado. Usa Math.sqrt().",
-      "params": ["Nummer: Nummer no negativo al que se le calcula la raíz cuadrada"],
-      "returns": "Nummer: raíz cuadrada del Nummer"
+    "sqrt": {
+      "description": "Berekent de vierkantswortel van een getal. De vierkantswortel van een getal is altijd positief, ook al is er mogelijk een geldige negatieve wortel. De vierkantswortel s van nummer a is zodanig dat s * s = a. Het is het omgekeerde van kwadrateren.",
+      "params": ["Getal: niet negatief getal."],
+      "returns": "Getal: de vierkantswortel ( resultaat * resultaat = n)."
     },
     "_noise": {
       "description": "Retorna el valor del ruido Perlin en las coordenadas específicas. El ruido Perlin es un generador de secuencias aleatorias produciendo una sucesión de Nummers más naturalmente ordenada y armónica, en comparación con la función estándar random(). Fue inventada por Ken Perlin en los 1980s y ha sido usada desde entonces en aplicaciones gráficas para producir texturas procedurales, movimiento natural, figuras, terrenos, etc. La principal diferencia con la función random() es definida en una espacio infinito n-dimensional donde cada par de coordenadas corresponde a un valor fijo semi-aleatorio (fijado solo durante el tiempo de vida del programa; ver la función noiseSeed()). p5.js puede calcular ruido 1D, 2D y 3D, dependiendo del Nummer de coordenadas dado. El valor resultante siempre estará entre 0.0 y 1.0. El valor de ruido puede ser animado moviéndose a través del espacio del ruido como fue demostrado en el ejemplo superior. Las dimensiones segunda y tercera también pueden ser interpretadas como tiempo. El ruido está estructurado de forma similar a una señal de audio, con respecto al uso de la función de las frecuencias. De forma similar al conecpto de armónicas en física, el ruido Perlin es calculado a lo largo de varias octavas que se han sumado para dar forma al resultado final. Otra manera de ajustar el caracter de la secuencia resultante es la escala de las coordenadas de entrada. Como la función trabaja en un espacio infinito, el valor de las coordenadas no importa como tal, solo la distancia entre las coordenadas sucesivas importa (por ejemplo: cuando se usa noise() dentro de un bucle). Como regla general, a menor la diferencia entre coordenadas, más suave es el ruido resultante. Pasos entre 0.005 y 0.03 funcionan mejor para la mayor parte de las aplicaciones, pero esto diferirá dependiendo del uso.",
-      "params": ["Nummer: coordenada x en el espacio del ruido",
-      "Nummer: coordenada y en el espacio del ruido",
-      "Nummer: coordenada z en el espacio del ruido"],
+      "params": ["Getal: coordenada x en el espacio del ruido",
+      "Getal: coordenada y en el espacio del ruido",
+      "Getal: coordenada z en el espacio del ruido"],
       "returns": "valor de ruido Perlin (entre 0 y 1) en las coordenadas especificadas"
     },
     "_noiseDetail": {
       "description": "Ajusta el caracter y nivel de detalle producido por la función de ruido Perlin. Similar al concepto de armónicas en física, el ruido es calculado a lo largo de varias octavas. Las octavas más graves contribuyen de forma más significativa a la señal de salida y como define la intensidad general del ruido, mientras que las octavas más altas crean detalles más finos en la secuencia de ruido. Por defecto, el ruido es calculado a lo largo de 4 octavas, con cada octava contribuyendo exactamente la mitad que su predecesora, partiendo con una intensidad de 50% para la primera octava. Este tamaño de caída puede ser cambiado al añadir un parámetro adicional a la función. Por ejemplo, un factor de caída de 75% significa que cada octava tendrá un 75% de impacto (25% menos) que la octava anterior. Cualquier valor entre 0.0 y 1.0 es válido, sin embargo nota que valores superiores a 0.5 pueden resultar en que noise() retorne valores mayores a 1.0. Al cambiar estos parámetros, la señal creada por noise() puede ser adaptada para calzar con necesidades y características específicas.",
-      "params": ["Nummer: Nummer de octavas a ser usadas por el ruido",
-      "Nummer: factor de caída para cada octava"],
+      "params": ["Getal: Nummer de octavas a ser usadas por el ruido",
+      "Getal: factor de caída para cada octava"],
       "returns": "el objeto p5"
     },
     "_noiseSeed": {
       "description": "Define el valor semilla para la función noise(). Por defecto, noise() produce diferentes resultados cada vez que el programa es ejecutado. Defines el parámetro value a una constante para que retorne la misma secuencia de Nummers pseudo-aleatorios cada vez que el programa es ejecutado",
-      "params": ["Nummer: el valor semilla"],
+      "params": ["Getal: el valor semilla"],
       "returns": "el objeto p5"
     },
-    "_acos": {
-      "description": "El inverso de la función cos(), retorna el arcocoseno de un valor. Esta función espera valores entre -1 y 1 y los valores retornados están en el rango entre 0 y PI (3.1415927).",
-      "params": ["Nummer: el valor al que se aplica arcocoseno"],
-      "returns": "Nummer: el arcocoseno del valor"
+    "acos": {
+      "description": "De inverse van de cosinus functie ( cos() ), retourneert de boogcosinus van een waarde. Deze functie verwacht dat de gegeven waarde in het bereik van -1 tot 1 en en het resultaat is in het bereik van 0 tot PI (3.1415927).",
+      "params": ["Getal: de waarde waarvan de boogcosinus moet worden geretourneerd"],
+      "returns": "Getal: de boogcosinus van de gegeven waarde"
     },
-    "_asin": {
-      "description": "El inverso de la función sin(), retorna el arcoseno de un valor. Esta función espera valores entre -1 y 1 y los valores retornados están en el rango entre -PI/2  y PI/2 .",
-      "params": ["Nummer: el valor al que se aplica arcoseno"],
-      "returns": "Nummer: el arcoseno del valor"
+    "asin": {
+      "description": "De asin() functie berekent de inverse van sin(),met als resultaat de boogsinus van een waarde. Deze functie verwacht dat de gegeven waarde in het bereik van -1 tot 1 en en het resultaat is in het bereik van -PI / 2 tot PI / 2.",
+      "params": ["Getal: de waarde waarvan de boog sinus moet worden geretourneerd."],
+      "returns": "Getal: de boogsinus van de gegeven waarde"
     },
     "_atan": {
       "description": "El inverso de la función tan(), retorna el arcotangente de un valor. Esta función espera valores entre -Infinito e Infinito (exclusivo) y los valores retornados están en el rango entre -PI/2  y PI/2 .",
-      "params": ["Nummer: el valor al que se aplica arcotangente"],
-      "returns": "Nummer: el arcotangente del valor"
+      "params": ["Getal: el valor al que se aplica arcotangente"],
+      "returns": "Getal: el arcotangente del valor"
     },
     "_atan2": {
       "description": "Calcula el ángulo (en radianes) desde un punto específico al origen, medido desde el eje x positivo. Los valores retornados son de tipo float entre  -PI/2  y PI/2. La función atan2() es más frecuentemente usada para orientar figuras figuras geométricas según la posición del cursor. Nota: la coordenada y del punto es el primer parámetro, y la coordenada x es el segundo parámetro, debido a la estructura para calcular la tangente.",
-      "params": ["Nummer: coordenada y del punto",
-      "Nummer: coordenada x del punto"],
-      "returns": "Nummer: el arcotangente del punto dado"
+      "params": ["Getal: coordenada y del punto",
+      "Getal: coordenada x del punto"],
+      "returns": "Getal: el arcotangente del punto dado"
     },
     "_cos": {
       "description": "calcula el coseno de un ángulo. Esta función toma en cuenta el modo actual de ángulo según angleMode(). Los valores son retornados en el rango entre -1 y 1.",
-      "params": ["Nummer: el ángulo"],
-      "returns": "Nummer: el coseno del ángulo"
+      "params": ["Getal: el ángulo"],
+      "returns": "Getal: el coseno del ángulo"
     },
     "_sin": {
       "description": "calcula el seno de un ángulo. Esta función toma en cuenta el modo actual de ángulo según angleMode(). Los valores son retornados en el rango entre -1 y 1.",
-      "params": ["Nummer: el ángulo"],
-      "returns": "Nummer: el seno del ángulo"
+      "params": ["Getal: el ángulo"],
+      "returns": "Getal: el seno del ángulo"
     },
     "_tan": {
       "description": "calcula la tangente de un ángulo. Esta función toma en cuenta el modo actual de ángulo según angleMode(). Los valores son retornados en el rango entre -1 y 1.",
-      "params": ["Nummer: el ángulo"],
-      "returns": "Nummer: la tangente del ángulo"
+      "params": ["Getal: el ángulo"],
+      "returns": "Getal: la tangente del ángulo"
     },
     "_degrees": {
       "description": "Convierte una medida en radianes a su correspondiente valor en grados. Radianes y grados son dos maneras de calcular lo mismo. Hay 360 grados en un círculo y 2*PI radianes en un círculo. Por ejemplo, 90 grados equivalen a PI/2 radianes.",
-      "params": ["Nummer: valor en radianes a ser convertido a grados."],
+      "params": ["Getal: valor en radianes a ser convertido a grados."],
       "returns": "el ángulo convertido"
     },
     "_radians": {
       "description": "Convierte una medida en grados a su correspondiente valor en radianes. Radianes y grados son dos maneras de calcular lo mismo. Hay 360 grados en un círculo y 2*PI radianes en un círculo. Por ejemplo, 90 grados equivalen a PI/2 radianes.",
-      "params": ["Nummer: valor en grados a ser convertido a radianes."],
+      "params": ["Getal: valor en grados a ser convertido a radianes."],
       "returns": "el ángulo convertido"
     },
     "_angleMode": {
@@ -1401,20 +1404,20 @@
     },
     "_randomSeed": {
       "description": "Define la semilla para la función random(). Por defecto, la función random() produce diferentes resultados cada vez que el programa es ejecutado. Definir el parámetro semilla como una constante hace que retorne la misma secuencia de Nummers pseudo-aleatorios cada vez que el programa es ejecutado.",
-      "params": ["Nummer: el valor semilla"],
+      "params": ["Getal: el valor semilla"],
       "returns": "el objeto p5"
     },
     "_random": {
       "description": "Retorna un Nummer aleaotorio de tipo float (punto flotante). Acepta 0, 1 o 2 argumentos. Si no se le da un argumento, retorna un Nummer aleatorio entre 0 y 1 (sin incluir 1). Si se da un argumento y es un Nummer, retorna un Nummer aleatorio entre 0 y hasta (pero sin incluir) el parámetro. Si se da un argumento y es un arreglo, retorna una elemento al azar del arreglo. Si se dan dos argumentos, retorna un Nummer aleatorio entre el primer argumento y hasta (pero sin incluir) el segundo argumento.",
-      "params": ["Nummer: el límite inferior (inclusivo)",
-      "Nummer: el límite superio (exclusivo)",
+      "params": ["Getal: el límite inferior (inclusivo)",
+      "Getal: el límite superio (exclusivo)",
       "Arreglo: el arreglo del cual se elige"],
-      "returns": "Nummer: el Nummer aleatorio o un elemento aleatorio de un conjunto de opciones"
+      "returns": "Getal: el Nummer aleatorio o un elemento aleatorio de un conjunto de opciones"
     },
     "_randomGaussian": {
       "description": "Retorna un Nummer aleatorio ajjustado a una distribución Gaussiana o normal. No existe teóricamente un valor mínimo o máximo que la función randomGaussian() pueda retornar. En vez de eso, existe solo una muy baja probabilidad de retornar valores lejos de la media, y una alta probabilidad de retornar Nummers cercanos a la media. Acepta 0, 1 o 2 argumentos. Si no tiene argumentos, retorna una media de 0 y una desviación estándar de 1. Si tiene un argumento, el argumento es la media (y la desviación estándar es 1). Si tiene dos argumentos, el primero es la media y el segundo es la desviación estándar.",
-      "params": ["Nummer: la media",
-      "Nummer: la desviación estándar"],
+      "params": ["Getal: la media",
+      "Getal: la desviación estándar"],
       "returns": "el Nummer aleatorio"
     },
     "_textAlign": {
@@ -1425,12 +1428,12 @@
     },
     "_textLeading": {
       "description": "Define o retorna el espaciado, en pixeles, entre líneas de texto. Esta configuración será usada en todas las llamadas posteriores a la función text().",
-      "params": ["Nummer: el tamaño en pixeles de espaciamiento entre líneas"],
+      "params": ["Getal: el tamaño en pixeles de espaciamiento entre líneas"],
       "returns": "el objeto p5"
     },
     "_textSize": {
       "description": "Define o retorna el tamaño actual de la tipografía. Este tamaño será usado en todas las llamadas posteriores a la función text(). El tamaño de la tipografía es medido en pixeles.",
-      "params": ["Nummer: el tamaño en pixeles de las letras en pixeles"],
+      "params": ["Getal: el tamaño en pixeles de las letras en pixeles"],
       "returns": "el objeto p5"
     },
     "_textStyle": {
@@ -1441,15 +1444,15 @@
     "_textWidth": {
       "description": "Berekent de lengte (aantal karakters) van een string.",
       "params": ["String: invoer string"],
-      "returns": "Nummer: Aantal characters"
+      "returns": "Getal: Aantal characters"
     },
     "_text": {
       "description": "Dibuja texto en la pantalla. Muestra la información especificada en el primer parámetro en la pantalla, en la posición especificada por los parámetros adicionales. Una fuente por defecto será usada a menos que una fuente sea definida por la función textFont() y un tamaño por defecto será usado a menos que se use la función textSize(). Cambia el color del texto con la función fill(). Cambia la apariencia del texto con las funciones stroke() y strokeWeight(). El texto se muestra en relación a la función textAlign(), que da la opción de dibujar a la izuiqerda, derecha y centro de las coordenadas. Los parámetros x2 e y2 definen un área rectangular donde mostrar el texto y solo puede ser usado por los datos tipo String. Cuando estos parámetros son especificados, son interpretados según la configuración de rectMode(). El texto que no cabe completamente dentro del rectángulo especificado no será dibujado en pantalla.",
       "params": ["String: símbolos alfanuméricos a ser mostrados",
-      "Nummer: coordenada x del texto",
-      "Nummer: coordenada y del texto",
-      "Nummer: por defecto, el ancho de la caja contenedora del texto, ver rectMode() para más información",
-      "Nummer: por defecto, la altura de la caja contenedora del texto, ver rectMode() para más información"],
+      "Getal: coordenada x del texto",
+      "Getal: coordenada y del texto",
+      "Getal: por defecto, el ancho de la caja contenedora del texto, ver rectMode() para más información",
+      "Getal: por defecto, la altura de la caja contenedora del texto, ver rectMode() para más información"],
       "returns": "Objeto"
     },
     "_textFont": {
@@ -1471,10 +1474,10 @@
     "_arrayCopy": {
       "description": "Copia el arreglo (o una parte del arreglo) a otro arreglo. El arreglo fuente es copiado al arreglo de destino, empezando por la posición especificada por srcPosition y a la posición especificada por dstPosition. El Nummer de elementos a copiar es determinado por el largo. Notar que al copiar valores se sobreescriben los valores existentes en el arreglo de destino. Para anexar valores en vez de sobreescribirlos, usa la función concat(). La versión simplificada con dos argumentos, arrayCopy(src, dest), copia un arreglo entero a otro del mismo tamaño. Es equivaletne a arrayCopy(src, 0, dst, 0, src.length). Usar esta función es mucho más eficiente para copiar datos de un arreglo que iterar con un bucle for() y copiar cada elemento individualmente. ",
       "params": ["Arreglo: el arreglo fuente",
-      "Nummer: posición inicial en el arreglo fuente",
+      "Getal: posición inicial en el arreglo fuente",
       "Arreglo: el arreglo de destino",
-      "Nummer: posición inicial del arreglo de destino",
-      "Nummer: númeor de elementos del arreglo a ser copiados"],
+      "Getal: posición inicial del arreglo de destino",
+      "Getal: númeor de elementos del arreglo a ser copiados"],
       "returns": "el objeto p5"
     },
     "_concat": {
@@ -1502,32 +1505,32 @@
     "_sort": {
       "description": "Ordena un arreglo de Nummers, desde el más pequeño al más grande, o pone un arreglo de palabras en orden alfabético. El arreglo original no es modificado, un nuevo arreglo ordenado es retornado. El parámetro count define el Nummer de elementos a ordenar. Por ejemplo, si hay 12 elementos en un arreglo y count es 5, los primeros 5 elementos del arreglo serán ordenados.",
       "params": ["Arreglo: arreglo a ordenar",
-      "Nummer: Nummer de elementos a ordenar, empezando desde 0"],
+      "Getal: Nummer de elementos a ordenar, empezando desde 0"],
       "returns": "el objeto p5"
     },
     "_splice": {
       "description": "Inserta un valor o un arreglo de valores en un arreglo existente El primer parámetro especifica el arreglo inicial a ser modificado, y el segundo parámetro define los datos a insertarse. El tercer parámetro es un índice que especifica la posición del arreglo a partir de la que se insertarán los datos. Recuerda que el índice del arreglo empieza en 0, así que la primera posición es 0, la segunda es 1, etc.",
       "params": ["Arreglo: arreglo a ser modificado",
       "Cualquiera: valor a ser introducido",
-      "Nummer: posición del arreglo donde se inserta el dato"],
+      "Getal: posición del arreglo donde se inserta el dato"],
       "returns": "el objeto p5"
     },
     "_subset": {
       "description": "Extrae un arreglo de elementos de un arreglo existente. El parámetro list define el arreglo desde el cual los elementos serán copiados, y los parámetros start y count especifican cuáles elementos extraer. Si no especifica count, los elementos serán extraidos desde el principio. Esta función no modifica el arreglo original",
       "params": ["Arreglo: arreglo del cual se extrae",
-      "Nummer: posición de donde empezar a extraer",
-      "Nummer: Nummer de valores a extraer"],
+      "Getal: posición de donde empezar a extraer",
+      "Getal: Nummer de valores a extraer"],
       "returns": "Arreglo: arreglo de elementos extraidos"
     },
     "_float": {
       "description": "Convierte un String a su representación de punto flotante. Los contenidos de un String deben parecerse a un Nummer, en otro caso NaN es retornado. Por ejemplo, float('1234.56') evalua a 1234.56, pero float('giraffe') retorna NaN. Cuando un arreglo de valores es pasado, un arreglo de floats del mismo largo es retornado.",
       "params": ["String: string a ser procesado"],
-      "returns": "Nummer: representación en punto flotante de un string"
+      "returns": "Getal: representación en punto flotante de un string"
     },
     "_int": {
       "description": "Convierte un boolean, string o float a su representación en Nummer entero. Cuando un arreglo de valores es introducido, entonces un arreglo de enteros de la misma longitud es retornado.",
       "params": ["String|Boolean|Nummer|Arreglo: valor a procesar"],
-      "returns": "Nummer: valor representado como entero"
+      "returns": "Getal: valor representado como entero"
     },
     "_str": {
       "description": "Convierte un boolean, string, o Nummer a su representación en string. Cuando un arreglo de valores es introducido, entonces un arreglo de strings de la misma longitud es retornado.",
@@ -1542,7 +1545,7 @@
     "_byte": {
       "description": "Convierte un Nummer, string o boolean a su representación en byte. Un byte puede solo ser un Nummer entero entre -128 y 127, así que cuando un valor fuera de este rango es convertido, se hace wrap a la representación correspondiente en byte. Cuando un arreglo de Nummers, string, o booleans es introducido, entonces un arreglo de bytes de la misma longitud es retornado.",
       "params": ["String|Boolean|Nummer|Arreglo: valor a procesar"],
-      "returns": "Nummer: representación en formato byte del valor"
+      "returns": "Getal: representación en formato byte del valor"
     },
     "_char": {
       "description": "Convierte un Nummer o string a su representaciómo como un string de un único caracter. Si se provee un parámetro, es primero pasado como entero y luego evaluado como un string de un único caracter. Cuando un arreglo de Nummers o strings es introducido, entonces un arreglo de strings de un único caracter de la misma longitud es retornado.",
@@ -1552,7 +1555,7 @@
     "_unchar": {
       "description": "Convierte un string de un único caracter a su correspondiente representación como valor entero. Cuando un arreglo de strings de un caracter es introducido, entonces un arreglo de enteros de la misma longitud es retornado.",
       "params": ["String|Arreglo: valor a procesar"],
-      "returns": "Nummer: representación en formato entero del valor"
+      "returns": "Getal: representación en formato entero del valor"
     },
     "_hex": {
       "description": "Convierte un Nummer a su correspondiente representación como hexadecimal. Si se ingersa un segundo parámetro, es usado para definir el Nummer de caracteres a generar en la notación hexadecimal. Cuando un arreglo es introducido, entonces un arreglo de strings en notación hexadecimal de la misma longitud es retornado.",
@@ -1562,7 +1565,7 @@
     "_unhex": {
       "description": "Convierte una representación en string de un Nummer hexadecimal a su correspondiente representación como valor entero. Cuando un arreglo de strings en notación hexadecimal es introducido, entonces un arreglo de enteros de la misma longitud es retornado.",
       "params": ["String|Arreglo: valor a procesar"],
-      "returns": "Nummer: representación en formato entero del valor hexadecimal"
+      "returns": "Getal: representación en formato entero del valor hexadecimal"
     },
     "_join": {
       "description": "Combina una arreglo de Strings en un String, cada uno separado por los caracteres usados como parámetro separator. Para unir arreglos de enteros o floats, es necesario primero convertirlos a Strings usando las funciones nf() o nfs().",
@@ -1585,28 +1588,28 @@
     "_nf": {
       "description": "Función de utilidad para formatear Nummers a strings. Existen dos veriones: una para formatear floats, y una para formatear enteros. Los valores de los dígitos y los parámetros left y right siempre deben ser enteros positivos",
       "params": ["Nummer|Arreglo: el Nummer a formatear",
-      "Nummer: Nummer de dígitos a la izquierda del punto decimal",
-      "Nummer: Nummer de dígitos a la derecha del punto decimal"],
+      "Getal: Nummer de dígitos a la izquierda del punto decimal",
+      "Getal: Nummer de dígitos a la derecha del punto decimal"],
       "returns": "String|Arreglo: String formateada"
     },
     "_nfc": {
       "description": "Función de utilidad para formatear Nummers en strings y poner las comas apropiadas para señalar múltiplos de mil. Hay dos versiones: una para Nummers enteros y otra para arreglos de enteros. El valor del parámetro right debe siempre ser un entero positivo.",
       "params": ["Nummer|Arreglo: el Nummer a formatear",
-      "Nummer: Nummer de dígitos a la derecha del punto decimal"],
+      "Getal: Nummer de dígitos a la derecha del punto decimal"],
       "returns": "String|Arreglo: String formateada"
     },
     "_nfp": {
       "description": "Función de utilidad para formatear Nummers en strings. Similar a nf() pero pone un signo + en frente de los Nummers positivos y un signo - en frente de Nummers negativos. Hay dos versiones, una para formatear floats y otra para formatear enteros. Los valores de los parámetros left y right deben siempre ser enteros positivos.",
       "params": ["Nummer|Arreglo: el Nummer a formatear",
-      "Nummer: Nummer de dígitos a la izquierda del punto decimal",
-      "Nummer: Nummer de dígitos a la derecha del punto decimal"],
+      "Getal: Nummer de dígitos a la izquierda del punto decimal",
+      "Getal: Nummer de dígitos a la derecha del punto decimal"],
       "returns": "String|Arreglo: String formateada"
     },
     "_nfs": {
       "description": "Función de utilidad para formatear Nummers en strings. Similar a nf() pero pone un espacio en frente de los Nummers positivos y un signo - en frente de Nummers negativos. Hay dos versiones, una para formatear floats y otra para formatear enteros. Los valores de los parámetros left y right deben siempre ser enteros positivos.",
       "params": ["Nummer|Arreglo: el Nummer a formatear",
-      "Nummer: Nummer de dígitos a la izquierda del punto decimal",
-      "Nummer: Nummer de dígitos a la derecha del punto decimal"],
+      "Getal: Nummer de dígitos a la izquierda del punto decimal",
+      "Getal: Nummer de dígitos a la derecha del punto decimal"],
       "returns": "String|Arreglo: String formateada"
     },
     "_split": {
@@ -1628,58 +1631,58 @@
     },
     "_camera": {
       "description": "Define la posición de la cámara",
-      "params": ["Nummer: valor de la posición de la cámara en el eje x",
-      "Nummer: valor de la posición de la cámara en el eje y",
-      "Nummer: valor de la posición de la cámara en el eje z"],
+      "params": ["Getal: valor de la posición de la cámara en el eje x",
+      "Getal: valor de la posición de la cámara en el eje y",
+      "Getal: valor de la posición de la cámara en el eje z"],
       "returns": "p5: el objeto p5"
     },
     "_perspective": {
       "description": "Define la perspectiva de la cámara",
-      "params": ["Nummer: frustum del campo de visión vertical de la cámara, de abajo hacia arriba, en grados",
-      "Nummer: frustum de la relación de aspecto de la cámara",
-      "Nummer: frustum del largo del plano cercano",
-      "Nummer: frustum del largo del plano lejano"],
+      "params": ["Getal: frustum del campo de visión vertical de la cámara, de abajo hacia arriba, en grados",
+      "Getal: frustum de la relación de aspecto de la cámara",
+      "Getal: frustum del largo del plano cercano",
+      "Getal: frustum del largo del plano lejano"],
       "returns": "p5: el objeto p5"
     },
     "_ortho": {
       "description": "Define la cámara ortogonal",
-      "params": ["Nummer: define el frustum del plano izquierdo de la cámara",
-      "Nummer: define el frustum del plano derecho de la cámara",
-      "Nummer: define el frustum del plano inferior de la cámara",
-      "Nummer: define el frustum del plano superior de la cámara",
-      "Nummer: define el frustum del plano cercano de la cámara",
-      "Nummer: define el frustum del plano lejano de la cámara"],
+      "params": ["Getal: define el frustum del plano izquierdo de la cámara",
+      "Getal: define el frustum del plano derecho de la cámara",
+      "Getal: define el frustum del plano inferior de la cámara",
+      "Getal: define el frustum del plano superior de la cámara",
+      "Getal: define el frustum del plano cercano de la cámara",
+      "Getal: define el frustum del plano lejano de la cámara"],
       "returns": "p5: el objeto p5"
     },
     "_ambientLight": {
       "description": "Crea una luz ambiente con color",
       "params": ["Nummer|Arreglo|String|p5.Color: valor de gris, rojo o tinte (dependiendo del modo de color actual), o arreglo de color o String de color CSS",
-      "Nummer: opcional, valor de verde o saturación",
-      "Nummer: opcional, valor de azul o brillo",
-      "Nummer: opcional, valor de opacidad"],
+      "Getal: opcional, valor de verde o saturación",
+      "Getal: opcional, valor de azul o brillo",
+      "Getal: opcional, valor de opacidad"],
       "returns": "el objeto p5"
     },
 
     "_directionalLight": {
       "description": "Crea una luz direccional con color y dirección",
       "params": ["Nummer|Arreglo|String|p5.Color: valor de gris, rojo o tinte (dependiendo del modo de color actual), o arreglo de color o String de color CSS",
-      "Nummer: opcional, valor de verde o saturación",
-      "Nummer: opcional, valor de azul o brillo",
-      "Nummer: opcional, valor de opacidad",
+      "Getal: opcional, valor de verde o saturación",
+      "Getal: opcional, valor de azul o brillo",
+      "Getal: opcional, valor de opacidad",
       "Nummer|p5.Vector: dirección del eje x o un p5.Vector",
-      "Nummer: opcional, dirección del eje y",
-      "Nummer: opcional, dirección del eje z"],
+      "Getal: opcional, dirección del eje y",
+      "Getal: opcional, dirección del eje z"],
       "returns": "el objeto p5"
     },
     "_pointLight": {
       "description": "Crea una luz puntual con color y posición",
       "params": ["Nummer|Arreglo|String|p5.Color: valor de gris, rojo o tinte (dependiendo del modo de color actual), o arreglo de color o String de color CSS",
-      "Nummer: opcional, valor de verde o saturación",
-      "Nummer: opcional, valor de azul o brillo",
-      "Nummer: opcional, valor de opacidad",
+      "Getal: opcional, valor de verde o saturación",
+      "Getal: opcional, valor de azul o brillo",
+      "Getal: opcional, valor de opacidad",
       "Nummer|p5.Vector: dirección del eje x o un p5.Vector",
-      "Nummer: opcional, dirección del eje y",
-      "Nummer: opcional, dirección del eje z"],
+      "Getal: opcional, dirección del eje y",
+      "Getal: opcional, dirección del eje z"],
       "returns": "p5: el objeto p5"
     },
     "_normalMaterial": {
@@ -1694,17 +1697,17 @@
     "_ambientMaterial": {
       "description": "Material ambiente para geometría con un color dado. Puedes ver todos los posibles materiales en este ejemplo (TODO).",
       "params": ["Nummer|Arreglo|String|p5.Color: valor de gris, rojo o tinte (dependiendo del modo de color), o arreglo de color, o String de color CSS",
-      "Nummer: opcional, valor de verde o saturación",
-      "Nummer: opcional, valor de azul o brillo",
-      "Nummer: opcional, valor de opacidad"],
+      "Getal: opcional, valor de verde o saturación",
+      "Getal: opcional, valor de azul o brillo",
+      "Getal: opcional, valor de opacidad"],
       "returns": "p5: el objeto p5"
     },
     "_specularMaterial": {
       "description": "Material espejo para geometría con un color dado. Puedes ver todos los posibles materiales en este ejemplo (TODO).",
       "params": ["Nummer|Arreglo|String|p5.Color: valor de gris, rojo o tinte (dependiendo del modo de color), o arreglo de color, o String de color CSS",
-      "Nummer: opcional, valor de verde o saturación",
-      "Nummer: opcional, valor de azul o brillo",
-      "Nummer: opcional, valor de opacidad"],
+      "Getal: opcional, valor de verde o saturación",
+      "Getal: opcional, valor de azul o brillo",
+      "Getal: opcional, valor de opacidad"],
       "returns": "p5: el objeto p5"
     },
     "_p5.RendererGL": {

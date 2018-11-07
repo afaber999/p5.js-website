@@ -1,19 +1,19 @@
 /*
  * @name Slider
- * @description You will need to include the 
- * <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>
- * for this example to work in your own project.<br><br>
- * Move the sliders to control the R, G, B values of the background.
+ * @description U heeft de 
+ * <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom bibliotheek nodig</a>
+ * om dit voorbeeld te laten functioneren in U eigen project.<br><br>
+ * Verplaats de slider om de Rood, Groen en Blauw waarden van de achtergrond aan te passen.
  */
 var rSlider, gSlider, bSlider;
 
 function setup() {
-  // create canvas
+  // creer hat canvas
   createCanvas(710, 400);
   textSize(15);
   noStroke();
 
-  // create sliders
+  // creer sliders
   rSlider = createSlider(0, 255, 100);
   rSlider.position(20, 20);
   gSlider = createSlider(0, 255, 0);

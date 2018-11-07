@@ -1,25 +1,25 @@
 /*
- * @name Input and Button
- * @description You will need to include the 
- * <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>
- * for this example to work in your own project.<br><br>
- * Input text and click the button to see it affect the the canvas.
+ * @name Invoer en Button
+ * @description U heeft de 
+ * <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom bibliotheek nodig</a>
+ * om dit voorbeeld te laten functioneren in U eigen project.<br><br>
+ * Voer de tekst in en klik op de button, waarna de inhoud van het canvas wordt aangepast.
  */
 var input, button, greeting;
 
 function setup() {
 
-  // create canvas
+  // creer canvas
   createCanvas(710, 400);
 
   input = createInput();
   input.position(20, 65);
 
-  button = createButton('submit');
+  button = createButton('invoeren');
   button.position(input.x + input.width, 65);
   button.mousePressed(greet);
 
-  greeting = createElement('h2', 'what is your name?');
+  greeting = createElement('h2', 'wat is U naam?');
   greeting.position(20, 5);
 
   textAlign(CENTER);
@@ -28,7 +28,7 @@ function setup() {
 
 function greet() {
   var name = input.value();
-  greeting.html('hello '+name+'!');
+  greeting.html('hallo '+name+'!');
   input.value('');
 
   for (var i=0; i<200; i++) {

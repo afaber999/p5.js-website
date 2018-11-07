@@ -1,9 +1,9 @@
 /*
  * @name Regular Polygon
- * @description What is your favorite? Pentagon? Hexagon? Heptagon? No? 
- * What about the icosagon? The polygon() function created for this example is 
- * capable of drawing any regular polygon. Try placing different numbers into 
- * the polygon() function calls within draw() to explore.
+ * @description Wat is je favoriet? Pentagon? Hexagon? Heptagon? Nee? 
+ * Wat denk je van een icosagon? De polygon() functie maakt een reguliere
+ * polygoon. Probeer meer of minder polygon() functie calls toe te vooegen
+ * in de draw() om te onderzoeken wat voor invloed dit heeft.
  */
 function setup() {
   createCanvas(720, 400);
