@@ -271,37 +271,37 @@
       "Getal: Integer :aantal segmenten in de y-richting."],
       "returns": ""
     },
-    "_triangle": {
-      "description": "Un triángulo es un plano creado por la conexión de tres puntos. Los primeros dos argumentos especifican el primer punto, los parámetros centrales especifican el segundo punto, y los dos últimos parámetros especifican el tercer punto.",
-      "params": ["Getal: coordenada x del primer punto.",
-      "Getal: coordenada y del primer punto.",
-      "Getal: coordenada x del segundo punto.",
-      "Getal: coordenada y del segundo punto.",
-      "Getal: coordenada x del tercer punto.",
-      "Getal: coordenada y del tercer punto."],
-      "returns": "the p5 object"
-    },
-    "_ellipseMode": {
-      "description": "Modifica la ubicación de donde las elipses son dibujadas, cambiando la manera en que los parámetros dados a ellipse() son interpretados. El modo por defecto es ellipseMode(CENTER), que interpreta los dos primeros parámetros de ellipse() como el centro de la figura, mientras que los parámetros tercero y cuarto son el ancho y la altura. ellipseMode(RADIUS) también usa los dos primeros parámetros de ellipse() como el punto central de la figura, pero usa los parámetros tercero y cuarto para especificar la mitad del ancho y la altura de la figura. ellipseMode(CORNER) interpreta los dos primeros parámetros de ellipse() como la esquina superior izquierda de la figura, mientras que los parámetros tercero y cuarto son el ancho y la altura. ellipseMode(CORNERS) interpreta los dos primeros parámetros de ellipse() como la ubicación de una esquina del rectángulo contenedor de la elipse, y los parámetros tercero y cuarto como la ubicación de la esquina opuesta. El parámetro debe ser escrito en MAYÚSCULAS porque Javascript es una lenguaje de programación que distingue entre mayúsculas y minúsculas.",
-      "params": ["Constante: puede ser CENTER, RADIUS, CORNER, o CORNERS."],
-      "returns": "the p5 object"
-    },
-    "_noSmooth": {
-      "description": "Dibuja las figuras geométricas con bordes no suaves (aliasing). Notar que smooth() está activo por defecto, así que es necesario ejectuar noSmooth() para deshabilitar el suavizado de las figuras geométricas, imágenes y tipografías.",
-      "returns": "el objeto p5"
-    },
-    "_rectMode": {
-      "description": "Modifica la ubicación en que los rectángulos son dibujados, cambiando la manera en que los parámetros dados a rect() son interpretados. El modo por defecto es rectMode(CORNER), que interpreta los primeros dos parámetros de rect() como la esquina superior izquierda de la figura, mientras que los parámetros tercero y cuarto son su ancho y altura. rectMode(CORNERS) interpreta los dos primeros parámetros de rect() como la ubicación de una esquina, y los parámetros tercero y cuarto como la ubicación de la esquina opuesta. rectMode(CENTER) interpreta los dos primeros parámetros de rect() como el punto central de la figura, mientas que los parámetros tercero y cuarto son su ancho y altura. rectMode(RADIUS) también usa los dos primeros parámetros de rect()= como el punto central de la figura, pero usa los parámetros tercero y cuarto para especificar la mitad del ancho y la altura de la figura. Los parámetros deben ser escritos en MAYÚSCULAS porque Javascript es un lenguaje que distingue entre mayúsculas y minúsculas.",
-      "params": ["Constante: puede ser CORNER, CORNERS, CENTER, o RADIUS."],
+    "triangle": {
+      "description": "Tekent een driehoek welke gedefinieerd wordt door drie punten. De eerste twee argumenten specificeren het eerste punt, de middelste twee argumenten specificeren het tweede punt en de laatste twee argumenten specificeren het derde punt.",
+      "params": ["Getal: het x-coördinaat van het eerste punt.",
+        "Getal: het y-coördinaat van het eerste punt.",
+        "Getal: het x-coördinaat van het tweede punt.",
+        "Getal: het y-coördinaat van het tweede punt.",
+        "Getal: het x-coördinaat van het derde punt.",
+        "Getal: het y-coördinaat van het derde punt."],
       "returns": ""
     },
-    "_smooth": {
-      "description": "Dibuja todas las figuras geométricas con bordes suaves (sin aliasing). smooth() también mejorará la calidad de las imágenes cuyo tamaño ha sido modificado. Notar que smooth() está activo por defecto; noSmooth() puede ser usado para deshabilitar el suavizado de las figuras geométricas, imágenes y tipografía.",
+    "ellipseMode": {
+      "description": "Wijzigt de locatie van waaruit ellipsen worden getekend. Door de manier te veranderen waarop parameters die aan ellips () worden gegeven, worden geïnterpreteerd.<br><br>De standaardmodus is ellipseMode (CENTER), in deze mode zijn de eerste twee parameters van ellipse() het middelpunt van de vorm, terwijl de derde en vierde parameters de breedte en hoogte zijn.<br><br>ellipseMode (RADIUS) gebruikt ook de eerste twee parameters van ellipse() als middelpunt van de vorm, maar gebruikt de derde en vierde parameter om de helft van de breedte en hoogte van de vorm op te specificeren.<br><br>ellipseMode (CORNER) gebruikt de  eerste twee parameters van ellipse() als de linkerbovenhoek van de vorm, terwijl de derde en vierde parameters de breedte en hoogte zijn.<br><br>ellipseMode (CORNERS) gebruikt de eerste twee parameters van ellipse() als de locatie van een hoek van het begrenzingsvak van de ellips en de derde en vierde parameter als de locatie van de tegenoverliggende hoek.<br><br>De parameter moet in HOOFDLETTERS worden geschreven, omdat Javascript een hoofdlettergevoelige taal is.",
+      "params": ["Constante: mogelijke waarden zijn CENTER, RADIUS, CORNER en CORNERS."],
       "returns": ""
     },
-    "_strokeCap": {
-      "description": "Define el estilo de rendering de los extremos de las líneas. Estos extremos pueden ser cuadrados, extendidos o redondeados, cada uno de estos especifados con los parámetros correspondientes: SQUARE, PROJECT, y ROUND. El extremo por defecto es redonedeado (ROUND).",
-      "params": ["Constante: puede ser SQUARE, PROJECT, o ROUND."],
+    "noSmooth": {
+      "description": "Tekent alle geometrie vormen met gekartelde (aliased) randen. Merk op dat smooth() standaard actief is, dus is het nodig om noSmooth() aan te roepen om het afvlakken van geometrie, afbeeldingen en lettertypen uit te schakelen.",
+      "returns": ""
+    },
+    "rectMode": {
+      "description": "Wijzigt de locatie van waaruit rechthoeken worden getekend, door de mode wijzigen waarop parameters die aan rect () worden gegeven, worden geïnterpreteerd. De standaardmodus is rectMode(CORNER) zijn de eerste twee parameters van rect() als de linkerbovenhoek van de vorm interpreteert, terwijl de derde en vierde parameters de breedte en hoogte ervan zijn. <br><br>rectMode(CORNERS) gebruikt de eerste twee parameters van rect() als de locatie van één hoek, en de derde en vierde parameters als de locatie van de tegenoverliggende hoek.<br><br>rectMode(CENTER) gebruikt de eerste twee parameters van rect() als middelpunt van de vorm, terwijl de derde en vierde parameters de breedte en hoogte zijn.<br><br>rectMode(RADIUS) gebruikt ook de eerste twee parameters van rect() als middelpunt van de vorm, maar gebruikt de derde en vierde parameter om de helft van de breedte en hoogte van de vormen op te geven.<br><br>De parameter moet in HOOFDLETTERS worden geschreven, omdat Javascript een hoofdlettergevoelige taal is.",
+      "params": ["Constante: mogelijke waarden zijn CORNER, CORNERS, CENTER of RADIUS."],
+      "returns": ""
+    },
+    "smooth": {
+      "description": "Tekent alle geometrie met vloeiende (anti-aliased) randen. smooth() verbetert ook de beeldkwaliteit van afbeeldingen waarvan de grootte is gewijzigd. Merk op dat smooth() standaard actief is; noSmooth() kan worden gebruikt om het afvlakken van geometrie, afbeeldingen en lettertypen uit te schakelen.",
+      "returns": ""
+    },
+    "strokeCap": {
+      "description": "Stelt de stijl in voor het renderen van lijneinden. Deze uiteinden zijn vierkant, verlengd of afgerond, en hebben bijbehorende parameters: SQUARE, PROJECT en ROND. De standaardkap is ROND.",
+      "params": ["Constante: mogelijke waarden zijn SQUARE, PROJECT of ROUND."],
       "returns": ""
     },
     "strokeJoin": {
@@ -523,24 +523,24 @@
       "returns": ""
     },
     "TWO_PI": {
-      "description": "TWO_PI is een wiskundige constante met de waarde 6.28318530717958647693. De verhouding (2x circel omtrek)/(diameter) komt overeen met TWO_PI. De constante wordt veel gebruikt in combinatie met de trigonometrische functies sin () en cos ().",
+      "description": "TWO_PI is een wiskundige constante met de waarde 6.28318530717958647693. De verhouding (2x circel omtrek)/(diameter) komt overeen met TWO_PI. De constante wordt veel gebruikt in combinatie met de trigonometrische functies sin() en cos().",
       "returns": ""
     },
-    "_preload": {
-      "description": "La función preload() es ejecutada antes de setup(), es usada para manejar la carga asíncrona de archivos externos. Si se define una función preload(), setup() esperará hasta que las llamadas a funciones load hayan terminado. Solo se deben incluir instrucciones de carga dentro de preload() (loadImage, loadJSON, loadFont, loadStrings, etc).",
-      "returns": "el objeto p5"
+    "preload": {
+      "description": "Direct vóór de setup() functie wordt aangeroepen, wordt de preload() functie aangeroepen. Dit kan heel handig zijn om bestanden of anderen resource, die normaal gesproken asynchroon worden geladen, op een blokkerende manier af te handelen. Als een preload-functie is aanwezig is, zal het programma wachten met het aanroepe van de setup() functie totdat alle het binenhalen van all resources is voltooid. Alleen het laden van resources (loadImage, loadJSON, loadFont, loadStrings, etc.) mogen in de preload-functie zitten. Het laden van resources kan natuurlijk ook op de normale (asynchrone) worden afghandeld door gebruik te maken van een callback-functie.<br><br>Bij default wordt de tekst '''loading ...''' weergegeven. Als u uw eigen laadpagina wilt maken, voegt u een HTML-element met id '''p5_loading''' toe aan uw pagina. Meer informatie ",
+      "returns": ""
     },
-    "_setup": {
-      "description": "La función setup() es ejecutada una vez, cuando el programa empieza. Es usada para definir propiedades iniciales como amaño de la pantalla y color de fondo y para cargar medios como imágenes y tipografías cuando el programa empieza. Solo puede haber una función setup() en cada programa y no debe ser llamada después de su ejecución inicial. Nota: las variables declaradas dentro de setup() no son accesibles dentro de otras funciones, como draw().",
-      "returns": "el objeto p5"
+    "setup": {
+      "description": "De functie setup  wordt één keer aangeroepen wanneer het programma start. Het wordt gebruikt om de begin toestand van het programma in te stellen, zoals schermgrootte en achtergrondkleur en om media zoals afbeeldingen en lettertypen te laden wanneer. Ieder programma kan slechts één setup() functie bevatten en deze mag niet opnieuw worden aangeroepen na deze is uitgevoerd. <br><br> Opmerking: variabelen gedeclareerd in setup() zijn niet toegankelijk in andere functies, waaronder draw ().",
+      "returns": ""
     },
-    "_draw": {
-      "description": "La función draw() es ejecutada después de setup(), y ejecuta contínuamente las líneas de código dentro de su bloque hasta que el programa es detenido o se ejecuta la función noLoop(). Notar que si noLoop() es ejecutada dentro de setup(), draw() igualmente será ejecutado una vez antes de parar. La función draw() es ejecutada automáticamente y nunca debiera ser ejecutada explícitamente. Siempre debería ser controlada con noLoop(), redraw() y loop(). Después de que noLoop() detiene la ejecución del código dentro de draw(), redraw() causa que el código dentro de draw() se ejecute una vez, y loop() causa que el código dentro de draw() siga ejecutándose de forma continua. El Nummer de veces que draw() se ejecuta por segundo puede ser controlado con la función frameRate(). Solo puede haber una función draw() en cada bosquejo, y draw() solo debe existir si quieres que el código corra de forma continua, o para procesar eventos como mousePressed(). Algunas veces, podrías querer ejecutar una función draw() vacía, como se mostró en el ejemplo más arriba. Es importante notar que el sistema de coordenadas de dibujo será reiniciado al principio de cada ejecución de la función draw(). Si cualquier transformación es hecha dentro de draw() (por ejemplo: escalar, rotar, trasladar), sus efectos serán anulados al principio de cada ejecución de draw(), así que las transformaciones no se acumulan en el tiempo. Por el otro lado, el estilo aplicado (color de relleno, color de trazado) sí se mantendrá en efecto. ",
-      "returns": "el objeto p5"
+    "draw": {
+      "description": "Direct nadat de setup() functie voltooid is, wordt de draw() functie continue aangeroepen, de coderegels in draw functie programma wordt gestopt als noLoop() wordt aangeroepen. Opmerking als noLoop() wordt opgeroepen in setup(), wordt draw() slechts één keer uitgevoerd. De draw() wordt automatisch aangeroepen en mag nooit expliciet worden aangeroepen.<br><br>Om het aanroep gedrag van de draw() functie te wijzigen moet altijd een van de volgende functies gebruikt worden: noLoop(), redraw() en loop(). Nadat noLoop() ia aangeroepen zal de code in draw() net verder worden uitgevoerd, redraw() zorgt ervoor dat de code binnen draw() één keer wordt uitgevoerd en loop() zorgt ervoor dat de code binnen draw() continu wordt uitgevoerd.<br><br>Het aantal keren dat draw() wordt uitgevoerd in elke seconde kan worden geregeld met de functie frameRate(). <br><br>Voor ieder programma kan er slechts één draw() functie zijn. De draw() functie moet bestaan ​​als u de code continu wilt laten lopen of als u gebeurtenissen zoals mousePressed() wilt verwerken. Soms heeft u misschien een lege draw() functie nodig om U programma goed te laten functioneren, zoals in het bovenstaande voorbeeld.<br><br>Verder is het is belangrijk om te weten dat het tekencoördinatensysteem aan het begin van elke draw() functie aanroep wordt gereset. Als er transformaties worden uitgevoerd binnen draw() (bijvoorbeeld: schaal, roteren, transleren), worden hun effecten aan het begin van draw() ongedaan gemaakt, zodat transformaties zich niet in de loop van de tijd accumuleren. Aan de andere kant blijft de toegepaste styling (bijv .: fill(), stroke(), enz.) wel onveranderd.",
+      "returns": ""
     },
-    "_remove": {
-      "description": "Remueve el bosquejo de p5 completamente. Esto removerá el lienzo y cualquier otro elemento creado por p5.js. También detendrá el bucle de dibujo y desvinculará cualquier propiedad o método global de la ventana. Dejará una variable p5 en caso que quieras crear un nuevo bosquejo p5. Si quieres, puedes definir p5 = null para borrar esta variable.",
-      "returns": "el objeto p5"
+    "remove": {
+      "description": "Verwijdert de gehele p5-schets. Hiermee wordt het canvas en alle elementen verwijderd die zijn gemaakt door het p5.js programma. Ook wordt de draw() loop gestopt en worden alle eigenschappen lost gekoppeld van het window. Het laat een variabele p5 achter voor het geval je een nieuwe p5-schets wilt aanmaken. Indien gewenst, kun je p5 = null instellen om het te wissen. Hoewel alle functies en variabelen en objecten die door de p5-bibliotheek zijn gemaakt, worden verwijderd, blijven alle andere algemene variabelen die door uw code zijn gemaakt, behouden.",
+      "returns": ""
     },
     "_noLoop": {
       "description": "Detiene la ejecución continua del código de draw() de p5.js. Si se llama a la función loop(), el código dentro de draw() empieza a correr de forma continua nuevamente. Si se usa noLoop() dentro de setup(), debe ser la última línea de código dentro del bloque. Cuando se usa noLoop(), no es posible manipular o acceder a la pantalla dentro de las funciones que manejan eventos como mousePressed() o keyPressed(). En vez de eso, usa estas funciones para llamar a redraw() o loop(), que permitirán la ejecución de draw(), lo que permite el refresco correcto de la pantalla. Esto significa que cuando noLoop() ha sido ejecutado, no se sigue dibujando, y funciones como saveFrame() o loadPixels() no se pueden usar. Notar que si el bosquejo es escalado, redraw() será llamado para actualizar el bosquejo, incluso si noLoop() ha sido ejecutada. Por otro lado, el bosquejo entrará a un estado singular, hasta que loop() sea ejecutado.",
@@ -1204,13 +1204,13 @@
       "description": "p5.js se comunica con el reloj de tu computador. La función month() retorna el mes actual como un valor entre 1 y 12.",
       "returns": "Getal: el mes actual"
     },
-    "_second": {
-      "description": "p5.js se comunica con el reloj de tu computador. La función second() retorna el mes actual como un valor entre 0 y 59.",
-      "returns": "Getal: el segundo actual"
+    "second": {
+      "description": "The second() functie retouneert de seconden van de systeemklok (0 - 59).",
+      "returns": "Getal: huidige seconde (geheel getal)"
     },
-    "_year": {
-      "description": "p5.js se comunica con el reloj de tu computador. La función year() retorna el año actual como un entero (2014, 2015, 2015, etc).",
-      "returns": "Getal: el año actual"
+    "year": {
+      "description": "De functie year() retourneert het huidige jaar als een geheel getal (2014, 2015, 2016, enz.).",
+      "returns": "Getal: het huidige jaar (geheel getal)"
     },
     "_p5.XML": {
       "description": "XML es una representación de un objeto XML, capaz de procesar código XML. Usa loadXML() para cargar archivos externos XML y crear objetos XML",
