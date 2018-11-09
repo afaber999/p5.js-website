@@ -1,6 +1,6 @@
 /*
- * @name Iteration
- * @description Iteration with a "for" structure to construct repetitive forms.
+ * @name Iteratie
+ * @description Voorbeeld met een "for" lus om wit en zwarte balken te tekenen.
  */
 var y;
 var num = 14;
@@ -11,7 +11,7 @@ function setup() {
   background(102);
   noStroke();
      
-  // Draw white bars 
+  // Teken de witte balken 
   fill(255);
   y = 60;
   for(var i = 0; i < num/3; i++) {
@@ -19,7 +19,7 @@ function setup() {
     y+=20;
   }
 
-  // Gray bars
+  // Teken de grijze balken
   fill(51);
   y = 40;
   for(var i = 0; i < num; i++) {
@@ -32,7 +32,7 @@ function setup() {
     y += 20;
   }
     
-  // Thin lines
+  // Teken de dunne lijnen
   y = 45;
   fill(0);
   for(var i = 0; i < num-1; i++) {

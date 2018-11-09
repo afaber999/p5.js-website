@@ -1,8 +1,8 @@
 /*
- * @name Logical Operators
- * @description The logical operators for AND (&&) and OR (||) are used to 
- * combine simple relational statements into more complex expressions.
- * The NOT (!) operator is used to negate a boolean statement. 
+ * @name Logische Operatoren
+ * @description De logische operatoren EN (&&) en OF (||) kunnen gebruik
+ * worden om complexere expressies samen te stellen uit eenvoudige(re) expressies.
+ * De NIET (!) operator kan gebruikt worden om eem booleanse waarde om te keren. 
  */
 var test = false;
 
@@ -12,29 +12,29 @@ function setup() {
   background(126);
 
   for (var i = 5; i <= height; i += 5) {
-    // Logical AND
+    // Logische AND
     stroke(0);
     if((i > 35) && (i < 100)) {
       line(width/4, i, width/2, i);
       test = false;
     }
     
-    // Logical OR
+    // Logische OR
     stroke(76);
     if ((i <= 35) || (i >= 100)) {
       line(width/2, i, width, i);
       test = true;
     }
     
-    // Testing if a boolean value is "true"
-    // The expression "if(test)" is equivalent to "if(test == true)"
+    // Testen dat een booleanse waarde waar is ("true")
+    // De expressie "if(test)" is hetzelfde als "if(test == true)"
     if (test) {
       stroke(0);
       point(width/3, i);
     }
       
-    // Testing if a boolean value is "false"
-    // The expression "if(!test)" is equivalent to "if(test == false)"
+    // Testen dat een booleanse waarde niet waar is ("false")
+    // De expressie "if(!test)" is hetzelfde als "if(test == false)"
     if (!test) {
       stroke(255);
       point(width/4, i);

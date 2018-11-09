@@ -314,55 +314,60 @@
       "params": ["Getal: De breedte van de lijn (in pixels)"],
       "returns": ""
     },
-    "_bezier": {
-      "description": "Dibuja una curva Bezier cúbica en la pantalla. Estas curvas están definidas por una serie de puntos ancla y de control. Los primeros dos parámetros especifican el primer punto ancla y los dos últimos especifican el otro punto ancla, que se convierten en los puntos primero y último de la curva. Los parámetros en el medio especifican los dos puntos de control que definen la forma de la curva. De forma aproximada, los puntos de control atraen la curva hacia ellos. Las curvas Bezier fueron desarrolladas por el ingeniero automotriz Pierre Bezier, y son comúnmente usadas en gráficas computacionales para definir curvas de pendiente suave. Ver también curve().",
-      "params": ["Getal: coordenada x del primer punto ancla",
-      "Getal: coordenada y del primer punto ancla",
-      "Getal: coordenada x del primer punto de control",
-      "Getal: coordenada y del primer punto de control",
-      "Getal: coordenada x del segundo punto de control",
-      "Getal: coordenada y del segundo punto de control",
-      "Getal: coordenada x del segundo punto ancla",
-      "Getal: coordenada y del segundo punto ancla",
-      "Getal: coordenada z del primer punto ancla",
-      "Getal: coordenada z del primer punto de control",
-      "Getal: coordenada z del segundo punto ancla",
-      "Getal: coordenada z del segundo punto de control"],
-      "returns": "the p5 object"
+    "bezier": {
+      "description": "Hiermee tekent u een kubische Bézier-curven op het scherm. Deze curven worden gedefinieerd door een reeks anker en controlepunten. De eerste twee parameters geven het eerste ankerpunt aan en de laatste twee parameters geven het andere ankerpunt aan, die de eerste en laatste punten op de curve worden. De middelste parameters specificeren de twee besturingspunten die de vorm van de curve bepalen. Bij benadering \"trekken\" de control punten de curve naar hen toe.<br><br>Bezier-curven zijn ontwikkeld door de Franse autotechnicus Pierre Bézier en worden vaak gebruikt in computergraphics om zacht glooiende bochten te definiëren. Zie ook curve().",
+      "params": ["Getal: x-coördinaat voor het eerste ankerpunt",
+        "Getal: y-coördinaat voor het eerste ankerpunt",
+        "Getal: x-coördinaat voor het eerste control punt",
+        "Getal: y-coördinaat voor het eerste control punt",
+        "Getal: x-coördinaat voor het tweede control punt",
+        "Getal: y-coördinaat voor het tweede control punt",
+        "Getal: x-coördinaat voor het tweede ankerpunt",
+        "Getal: y-coördinaat voor het tweede ankerpunt",
+        "Getal: z-coördinaat voor het eerste ankerpunt",
+        "Getal: z-coördinaat voor het eerste control punt",
+        "Getal: z-coördinaat voor het tweede control punt",
+        "Getal: z-coördinaat voor het tweede ankerpunt"],
+      "returns": ""
     },
-    "_bezierPoint": {
-      "description": "Evalua la curva Bezier en la posición t para los puntos a, b, c, d. Los parámetros a y d son los puntos primero y último de la curva, mientras que b y c son los puntos de control. El parámetro final t varía entre 0 y 1. Esto puede ser realizado una vez con las coordenadas x y una segunda vez con las coordenadas y para obtener la ubicación de la curva Bezier en t.",
-      "params": ["Getal: coordenada del primer punto de la curva",
-      "Getal: coordenada del primer punto de control de la curva",
-      "Getal: coordenada del segundo punto de control de la curva",
-      "Getal: coordenada del segundo punto de la curva",
-      "Getal: valor entre 0 y 1"],
-      "returns": "el valor de la curva Bezier en la posición t"
+    "bezierDetail": {
+      "description": "Stelt de resolutie in waarmee de Bézier curven wordt getekend.<br><br>De standaardwaarde is 20.<br><br>Deze functie is alleen nuttig als u de WEBGL-renderer gebruikt, omdat de standaard canvas-renderer deze informatie niet gebruikt.",
+      "params": ["Getal: resolutie van de curven"],
+      "returns": ""
+    },    
+    "bezierPoint": {
+      "description": "Evalueert de Bézier op positie t voor de punten a, b, c, d. De parameters a en d zijn de eerste en laatste punten op de curve en b en c zijn de control punten. De laatste parameter t varieert van 0 tot 1. Dit kan één keer gedaan worden met de x-coördinaten en een tweede keer met de y-coördinaten om de locatie van een bezier-curve op t te krijgen.",
+      "params": ["Getal: coördinaat van het eerste punt op de curve",
+        "Getal: coördinaat van het eerste control punt",
+        "Getal: coördinaat van tweede control punt",
+        "Getal: coördinaat van het tweede punt op de curve",
+        "Getal: waarde tussen 0 en 1"],
+      "returns": "Getal: de waarde van de Bézier op positie t"
     },
-    "_bezierTangent": {
-      "description": "Evalua la tangente de la curva Bezier en la posición t para los puntos a, b, c, d. Los parámetros a y d son los puntos primero y último de la curva, mientras que b y c son los puntos de control. El parámetro final t varía entre 0  1.",
-      "params": ["Getal: coordenada del primer punto de la curva",
-      "Getal: coordenada del primer punto de control de la curva",
-      "Getal: coordenada del segundo punto de control de la curva",
-      "Getal: coordenada del segundo punto de la curva",
-      "Getal: valor entre 0 y 1"],
-      "returns": "la tangente en la posición t"
+    "bezierTangent": {
+      "description": "Evalueert de raaklijn aan de Bézier curve op positie t voor de punten a, b, c, d. De parameters a en d zijn de eerste en laatste punten op de curve en b en c zijn de control punten. De laatste parameter t varieert van 0 tot 1.",
+      "params": ["Getal: coördinaat van het eerste punt op de curve",
+        "Getal: coördinaat van het eerste control punt",
+        "Getal: coördinaat van tweede control punt",
+        "Getal: coördinaat van het tweede punt op de curve",
+        "Getal: waarde tussen 0 en 1"],
+      "returns": "Getal: de tangent waarde van de Bézier curve op positie t"
     },
-    "_curve": {
-      "description": "Dibuja una línea curva en la pantalla entre dos puntos, dados como los cuatro parámetros centrales. Los dos primeros puntos son un punto de control, como si la curva viniera desde este punto, aunque no sea dibujado. Los dos últimos parámetros de forma similar describen el otro punto de control. SE pueden cerar curvas más largas, por medio del posicionamiento de varias funciones curve() juntas o usando curveVertex(). Una función adicional llamada curveTightness() provee control de la calidad visual de la curva. La función curve() es una implementación de la Catmull-Rom spline.",
-      "params": ["Getal: coordenada x del punto de control inicial",
-      "Getal: coordenada y del punto de control inicial",
-      "Getal: coordenada x del primer punto",
-      "Getal: coordenada y del primer punto",
-      "Getal: coordenada x del segundo punto",
-      "Getal: coordenada y del segundo punto",
-      "Getal: coordenada x del punto de control final",
-      "Getal: coordenada y del punto de control final",
-      "Getal: coordenada z del punto de control inicial",
-      "Getal: coordenada z del primer punto",
-      "Getal: coordenada z del segundo punto",
-      "Getal: coordenada z del punto de control final"],
-      "returns": "Objeto: el objeto p5"
+    "curve": {
+      "description": "Tekent een gebogen lijn op het scherm tussen twee punten, gegeven als de middelste vier parameters. De eerste twee parameters zijn een control punt, alsof de curve vanaf dit punt is ontstaan, hoewel deze niet is getekend. De laatste twee parameters beschrijven op soortgelijke wijze het andere besturingspunt.<br><br>Langere curven kunnen worden gemaakt door een reeks curve() functies samen te stellen of door curveVertex() te gebruiken. Een extra functie, curveTightness(), geeft controle over de visuele kwaliteit van de curve. De curve() functie is een implementatie van Catmull-Rom splines.",
+      "params": ["Nummer :x-coördinaat voor het begin control punt",
+        "Nummer :y-coördinaat voor het begin control punt",
+        "Nummer :x-coördinaat voor het eerste punt",
+        "Nummer :y-coördinaat voor het eerste punt",
+        "Nummer :x-coördinaat voor het tweede punt",
+        "Nummer :y-coördinaat voor het tweede punt",
+        "Nummer :x-coördinaat voor het end control punt",
+        "Nummer :y-coördinaat voor het endcontrol punt",
+        "Nummer :z-coördinaat voor het begin control punt",
+        "Nummer :z-coördinaat voor het eerste punt",
+        "Nummer :z-coördinaat voor het tweede punt",
+        "Nummer :z-coördinaat voor het end control punt"],
+      "returns": ""
     },
     "_curveTightness": {
       "description": "Modifica la calidad de las formas creadas con curve() y curveVertex(). El parámetro tightness (tirantez) determina cómo la curva calza con los vértices. El valor 0.0 es el valor por defecto (este valor define las curvas Spline Catmull-Rom) y el valor 1.0 conecta todos los puntos con líneas rectas. Valores en el rango entre -5.0 y 5.0 deformarán las curvas pero las dejarán reconocibles, y a medida que los valores crecen en magnitud, se continuarán deformando.",
@@ -535,20 +540,20 @@
       "returns": ""
     },
     "draw": {
-      "description": "Direct nadat de setup() functie voltooid is, wordt de draw() functie continue aangeroepen, de coderegels in draw functie programma wordt gestopt als noLoop() wordt aangeroepen. Opmerking als noLoop() wordt opgeroepen in setup(), wordt draw() slechts één keer uitgevoerd. De draw() wordt automatisch aangeroepen en mag nooit expliciet worden aangeroepen.<br><br>Om het aanroep gedrag van de draw() functie te wijzigen moet altijd een van de volgende functies gebruikt worden: noLoop(), redraw() en loop(). Nadat noLoop() ia aangeroepen zal de code in draw() net verder worden uitgevoerd, redraw() zorgt ervoor dat de code binnen draw() één keer wordt uitgevoerd en loop() zorgt ervoor dat de code binnen draw() continu wordt uitgevoerd.<br><br>Het aantal keren dat draw() wordt uitgevoerd in elke seconde kan worden geregeld met de functie frameRate(). <br><br>Voor ieder programma kan er slechts één draw() functie zijn. De draw() functie moet bestaan ​​als u de code continu wilt laten lopen of als u gebeurtenissen zoals mousePressed() wilt verwerken. Soms heeft u misschien een lege draw() functie nodig om U programma goed te laten functioneren, zoals in het bovenstaande voorbeeld.<br><br>Verder is het is belangrijk om te weten dat het tekencoördinatensysteem aan het begin van elke draw() functie aanroep wordt gereset. Als er transformaties worden uitgevoerd binnen draw() (bijvoorbeeld: schaal, roteren, transleren), worden hun effecten aan het begin van draw() ongedaan gemaakt, zodat transformaties zich niet in de loop van de tijd accumuleren. Aan de andere kant blijft de toegepaste styling (bijv .: fill(), stroke(), enz.) wel onveranderd.",
+      "description": "Direct nadat de setup() functie voltooid is, wordt de draw() functie continue aangeroepen, de coderegels in draw functie programma wordt gestopt als noLoop() wordt aangeroepen. Opmerking als noLoop() wordt opgeroepen in setup(), wordt draw() slechts één keer uitgevoerd. De draw() wordt automatisch aangeroepen en mag nooit expliciet worden aangeroepen.<br><br>Om het aanroep gedrag van de draw() functie te wijzigen moet altijd een van de volgende functies gebruikt worden: noLoop(), redraw() en loop(). Nadat noLoop() ia aangeroepen zal de code in draw() net verder worden uitgevoerd, redraw() zorgt ervoor dat de code binnen draw() één keer wordt uitgevoerd en loop() zorgt ervoor dat de code binnen draw() continu wordt uitgevoerd.<br><br>Het aantal keren dat draw() wordt uitgevoerd in elke seconde kan worden geregeld met de functie frameRate(). <br><br>Voor ieder programma kan er slechts één draw() functie zijn. De draw() functie moet bestaan ​​als u de code continu wilt laten lopen of als u gebeurtenissen zoals mousePressed() wilt verwerken. Soms heeft u misschien een lege draw() functie nodig om u programma goed te laten functioneren, zoals in het bovenstaande voorbeeld.<br><br>Verder is het is belangrijk om te weten dat het tekencoördinatensysteem aan het begin van elke draw() functie aanroep wordt gereset. Als er transformaties worden uitgevoerd binnen draw() (bijvoorbeeld: schaal, roteren, transleren), worden hun effecten aan het begin van draw() ongedaan gemaakt, zodat transformaties zich niet in de loop van de tijd accumuleren. Aan de andere kant blijft de toegepaste styling (bijv .: fill(), stroke(), enz.) wel onveranderd.",
       "returns": ""
     },
     "remove": {
       "description": "Verwijdert de gehele p5-schets. Hiermee wordt het canvas en alle elementen verwijderd die zijn gemaakt door het p5.js programma. Ook wordt de draw() loop gestopt en worden alle eigenschappen lost gekoppeld van het window. Het laat een variabele p5 achter voor het geval je een nieuwe p5-schets wilt aanmaken. Indien gewenst, kun je p5 = null instellen om het te wissen. Hoewel alle functies en variabelen en objecten die door de p5-bibliotheek zijn gemaakt, worden verwijderd, blijven alle andere algemene variabelen die door uw code zijn gemaakt, behouden.",
       "returns": ""
     },
-    "_noLoop": {
-      "description": "Detiene la ejecución continua del código de draw() de p5.js. Si se llama a la función loop(), el código dentro de draw() empieza a correr de forma continua nuevamente. Si se usa noLoop() dentro de setup(), debe ser la última línea de código dentro del bloque. Cuando se usa noLoop(), no es posible manipular o acceder a la pantalla dentro de las funciones que manejan eventos como mousePressed() o keyPressed(). En vez de eso, usa estas funciones para llamar a redraw() o loop(), que permitirán la ejecución de draw(), lo que permite el refresco correcto de la pantalla. Esto significa que cuando noLoop() ha sido ejecutado, no se sigue dibujando, y funciones como saveFrame() o loadPixels() no se pueden usar. Notar que si el bosquejo es escalado, redraw() será llamado para actualizar el bosquejo, incluso si noLoop() ha sido ejecutada. Por otro lado, el bosquejo entrará a un estado singular, hasta que loop() sea ejecutado.",
-      "returns": "el objeto p5"
+    "noLoop": {
+      "description": "P5.js roept standaard continu draw() functie aan en voert de code daarin uit. Deze continue aanroep van de draw() functie kan echter worden gestopt door de noLoop() aan te roepen. In deze situatie kan worden herstelt door de loop() functie aan te roepen.",
+      "returns": ""
     },
-    "_loop": {
-      "description": "Por defecto, p5.js repite de forma continua la función draw(), ejecutado el código dentro de su bloque. Sin embargo, el bucle de dibujo puede ser detenido llamando a la función noLoop(). En ese caso, el bucle de draw() puede ser retomado con loop().",
-      "returns": "el objeto p5"
+    "loop": {
+      "description": "P5.js roept standaard continu draw() functie aan en voert de code daarin uit. Deze continue aanroep van de draw() functie kan echter worden gestopt door de noLoop() aan te roepen. In deze situatie kan worden herstelt door de loop() functie aan te roepen.",
+      "returns": ""
     },
     "_push": {
       "description": "La función push() graba la configuración actual de estilo de dibujo, y pop() restaura esta configuración. Notar que estas funciones siempre son usadas en conjunto. Permiten cambiar las configuraciones de estilo y transformaciones y luego volver a lo que tenías. Cuando un nuevo estado es iniciado con push(), construye encima de la información actual de estilo y transformación. Las funciones push() y pop() pueden ser embebidas para proveer más control (ver el segundo ejemplo para una demostración). push() almacena información relacionada a la configuración de estado de transformación y de estulo actual, controlada por las siguientes funciones: fill(), stroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), imageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), textFont(), textMode(), textSize(), textLeading().",
@@ -558,14 +563,14 @@
       "description": "La función push() graba la configuración actual de estilo de dibujo, y pop() restaura esta configuración. Notar que estas funciones siempre son usadas en conjunto. Permiten cambiar las configuraciones de estilo y transformaciones y luego volver a lo que tenías. Cuando un nuevo estado es iniciado con push(), construye encima de la información actual de estilo y transformación. Las funciones push() y pop() pueden ser embebidas para proveer más control (ver el segundo ejemplo para una demostración). push() almacena información relacionada a la configuración de estado de transformación y de estulo actual, controlada por las siguientes funciones: fill(), stroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), imageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), textFont(), textMode(), textSize(), textLeading()."
     },
     "_redraw": {
-      "description": "Ejecuta una vez el código dentro de la función draw(). Esta función permite al programa actualizar la ventana mostrada solamente cuando es necesario, por ejemplo, cuando un evento registrado por mousePressed() o keyPressed() ocurre. En la estructura de un programa, solo hace sentido llamar a redraw() dentro de eventos como mousePressed(). Esto es porque redraw() no hace que draw() se ejecute de forma inmediata (solo define una indicación de que se necesita un refresco). La función redraw() no funciona de forma correcta cuando se llama dentro de la función draw(). Para habilitar y deshabilitar animaciones, usa las funcioens loop() y noLoop(). Adicionalmente, puedes definir el Nummer de veces que se dibuja por cada llamada a este método. Para esto, añade un entero como parámetro único a la función, que señale cuántas veces se requiere dibujar.",
-      "params": ["Entero: redibuja n-veces. Por defecto el valor es 1"],
-      "returns": "el objeto p5"
+      "description": "Voert de code eenmaal binnen draw () uit. Met deze functie is het mogelijk om het canvas alleen bijwerken wanneer dat nodig is, bijvoorbeeld wanneer er een mousePressed() of keyPressed () gebeurtenis (event) heeft plaatsgevonden.<br><br>Bij het structureren van een programma is het alleen zinvol om redraw() aan te roepen in een (event) callback, zoals een mousePressed() event. Dit omdat de redraw() draw () niet meteen wordt uitgevoert (er wordt alleen een vlag ingesteld die aangeeft dat een update nodig is).<br><br>De redraw() functie werkt niet correct wanneer deze binnen draw() wordt aangeroepen. Gebruik loop() en noLoop() om animaties aan/uit te schakelen.<br><br>Optioneel kunt U het aantal draw() herhalingen meegeven aan de redraw() functie.",
+      "params": ["Getal: geheel getal welke aangeeft hoe vaak de draw() functie moet worden aangeroepen "],
+      "returns": ""
     },
-    "_print": {
-      "description": "La función print() escribe en la consola del navegador. Esta función es a menudo de ayuda para observar los datos que un programa está produciendo. Esta función crea una nueva línea de texto por cada ejecución de la función. Elementos individuales pueden ser separados por comillas ('') y unidos con el operador de adición (+). Aunque print() es similar a console.log(), no llama a console.log() directamente, para simular una manera más simple de entender el comportamiento del programa. Por esto mismo, es más lento. Para resultados más rápidos, usar directamente console.log().",
-      "params": ["Cualquiera: cualquier combinación de Nummer, string, objeto, boolean o arreglo a imprimir"],
-      "returns": "el objeto p5"
+    "print": {
+      "description": "De functie print() kan een text regel schrijven in het console(gebied) van uw browser. Deze functie is kan nuttig zijn voor het bekijken van gegevens die een programma produceert. Met deze print() functie wordt een nieuwe regel tekst gemaakt. Individuele elementen kunnen worden gescheiden door aanhalingstekens (\"\") en samengevoegd met de operator voor optellen (+).",
+      "params": ["Alle objecten :iedere combinatie van Number, String, Object, Boolean, Array kan worden meegegeven om te printen"],
+      "returns": ""
     },
     "frameCount": {
       "description": "De systeemvariabele frameCount bevat het aantal frames dat is weergegeven sinds de start van het programma. Binnen setup() is de waarde 0, na de eerste iteratie van draw functie is deze 1, etc.",

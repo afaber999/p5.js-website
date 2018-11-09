@@ -1,12 +1,13 @@
 /*
  * @name Conditionals 1
- * @description Conditions are like questions. 
- * They allow a program to decide to take one action if 
- * the answer to a question is true or to do another action
- * if the answer to the question is false. 
- * The questions asked within a program are always logical
- * or relational statements. For example, if the variable 'i' is 
- * equal to zero then draw a line.
+ * @description Condities zijn vergelijkbaar met vragen. 
+ * Ze maken het mogelijk dat het programma een beslissing kan
+ * nemen om iets uit te voeren als het antwoord op een vraag
+ * waar is (true), en voer een ander stuk code uit als het antwoord
+ * niet waar is (false)
+ * De vragen die gesteld worden zijn altijd van logische of 
+ * rationele aard. Bijvoorbeeld, als de variable 'i' gelijk is
+ * aan nul teken dan een lijn
  */
 function setup() {
 
@@ -14,8 +15,8 @@ function setup() {
   background(0);
 
   for(var i = 10; i < width; i += 10) {
-    // If 'i' divides by 20 with no remainder draw the first line
-    // else draw the second line
+    // Als 'i' deelbaar is door 20 (zonder restwaarde), teken dan de eerste lijn
+    // anders teken de tweede lijn
     if(i%20 == 0) {
       stroke(255);
       line(i, 80, i, height/2);

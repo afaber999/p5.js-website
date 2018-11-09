@@ -1,6 +1,6 @@
 /*
  * @name Array Objects
- * @description Demonstrates the syntax for creating an array of custom objects.
+ * @description Dit voorbeeld demonstreert de mogelijkheid van een array met custom objects.
  */
 var unit = 40;
 var count;
@@ -42,7 +42,7 @@ function Module(_xOff, _yOff, _x, _y, _speed, _unit) {
   this.yDir = 1;
 }
 
-// Custom method for updating the variables
+// Custom methode voor het aanpassen van de variablen
 Module.prototype.update = function() {
   this.x = this.x + (this.speed * this.xDir);
   if (this.x >= this.unit || this.x <= 0) {
@@ -56,7 +56,7 @@ Module.prototype.update = function() {
   }
 }
 
-// Custom method for drawing the object
+// Custom method voor het tekenen van de objecten
 Module.prototype.draw = function() {
   fill(255);
   ellipse(this.xOff + this.x, this.yOff + this.y, 6, 6);

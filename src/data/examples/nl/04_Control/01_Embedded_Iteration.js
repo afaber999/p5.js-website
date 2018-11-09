@@ -1,6 +1,6 @@
 /*
- * @name Embedded Iteration
- * @description Embedding "for" structures allows repetition in two dimensions.
+ * @name Embedded Iteratie
+ * @description Een "for" loop in een for loop om door een twee dimensionale structuur te itereren.
  */
 function setup() {
 
